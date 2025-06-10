@@ -37,7 +37,7 @@
     <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
     <i class="fas fa-landmark"></i>
     </a>
-     <a href="calender.php" aria-label="Calender" class="text-white text-xl flex justify-center items-center">
+     <a href="calender.php" aria-l  abel="Calender" class="text-white text-xl flex justify-center items-center">
     <i class="fas fa-calendar-alt"></i>
     </a>
     <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
@@ -47,11 +47,9 @@
      <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
       <i class="fas fa-envelope">
       </i>
-     </a>
       <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
        7
-      </span>
-     </button>
+      </span> </a>
      <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
       <i class="fas fa-question-circle">
       </i>

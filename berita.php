@@ -1,381 +1,101 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUD Berita</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
-  <style>
-    /* Custom scrollbar for table container */
-    .scrollbar-thin::-webkit-scrollbar {
-      height: 6px;
-    }
-    .scrollbar-thin::-webkit-scrollbar-thumb {
-      background-color: #cbd5e1;
-      border-radius: 10px;
-    }
-  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
-<body class="bg-[#f8fafc] font-sans text-[#1e293b]">
-  <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
+<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen">
+  <div class="flex">
     <!-- Sidebar -->
-    <aside class="bg-[#3b5de7] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
-    <div class="text-center text-sm font-semibold leading-tight tracking-wide">
-     Admin
-     <br/>
-     Sepakung
-    </div>
-    <nav class="flex flex-col space-y-10 mt-6">
-     <a href="dashboard.php" aria-label="Home" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-home"></i>
-    </a>
-    <a href="berita.php" aria-label="Berita" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-newspaper"></i>
-    </a>
-    <a href="event.php" aria-label="Event" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-bullhorn"></i>
-    </a>
-    <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-landmark"></i>
-    </a>
-     <a href="calender.php" aria-label="Calender" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-calendar-alt"></i>
-    </a>
-    <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
-      <i class="fas fa-cog">
-      </i>
-     </a>
-     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
-      <i class="fas fa-envelope">
-      </i>
-     </a>
-      <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
-       7
-      </span>
-     </button>
-     <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
-      <i class="fas fa-question-circle">
-      </i>
-     </button>
-    </nav>
-   </aside>
+    <aside class="bg-[#3b5de7] w-16 md:w-20 min-h-screen flex flex-col items-center py-6 space-y-8 text-white">
+      <div class="text-center text-xs font-semibold leading-tight">Admin<br>Sepakung</div>
+      <nav class="flex flex-col space-y-8 mt-6">
+        <a href="dashboard.php" class="text-xl"><i class="fas fa-home"></i></a>
+        <a href="berita.php" class="text-xl"><i class="fas fa-newspaper"></i></a>
+        <a href="event.php" class="text-xl"><i class="fas fa-bullhorn"></i></a>
+        <a href="beritaPemerintah.php" class="text-xl"><i class="fas fa-landmark"></i></a>
+        <a href="calender.php" class="text-xl"><i class="fas fa-calendar-alt"></i></a>
+        <a href="kritiksaran.php" class="text-xl relative">
+          <i class="fas fa-envelope"></i>
+          <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span>
+        </a>
+        <a href="settings.php" class="text-xl"><i class="fas fa-cog"></i></a>
+      </nav>
+    </aside>
 
-    <div class="flex-1 flex flex-col">
-      <header class="flex items-center justify-between px-6 py-4 border-b border-[#cbd5e1] bg-white">
-        <nav class="flex space-x-8 text-sm font-medium text-[#334155]">
-          <a href="#" class="hover:text-[#0f172a]">Messages</a>
-          <a href="#" class="hover:text-[#0f172a]">Automation</a>
-          <a href="#" class="text-[#0f172a] font-semibold border-b-2 border-[#0f172a] pb-1">Contacts</a>
-          <a href="#" class="hover:text-[#0f172a]">Media Library</a>
-        </nav>
-        <div class="flex items-center space-x-4 text-sm text-[#334155]">
-          <button aria-label="Notifications" class="relative hover:text-[#0f172a]">
-            <i class="fas fa-bell"></i>
-          </button>
-          <button class="flex items-center space-x-1 border border-[#cbd5e1] rounded px-3 py-1 text-[#334155] hover:bg-[#f1f5f9]">
-            <span>Lucinda Henry</span>
-            <i class="fas fa-chevron-down text-xs"></i>
-          </button>
-        </div>
-      </header>
-
-      <main class="px-6 py-4 max-w-full overflow-auto">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="text-[#334155] font-semibold text-sm">Contacts <span class="text-[#64748b] font-normal">20,002 contacts</span></h2>
-          <button class="flex items-center space-x-1 border border-[#cbd5e1] rounded px-3 py-1 text-[#334155] hover:bg-[#f1f5f9] text-xs font-medium">
-            <span>Settings</span>
-            <i class="fas fa-chevron-down text-[10px]"></i>
-          </button>
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <div class="bg-white rounded-2xl shadow-lg p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-2xl font-bold">Daftar Berita</h1>
+          <a href="tambahberita.php" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+            + Tambah Berita
+          </a>
         </div>
 
-        <div class="flex flex-wrap gap-2 mb-4">
-          <button class="flex items-center space-x-1 bg-[#0f172a] text-white text-xs font-semibold rounded px-3 py-1 hover:bg-[#1e293b]">
-            <i class="fas fa-plus text-[10px]"></i>
-            <span>Add</span>
-          </button>
-          <button class="flex items-center space-x-1 border border-[#cbd5e1] rounded px-3 py-1 text-[#334155] text-xs font-semibold hover:bg-[#f1f5f9]">
-            <i class="fas fa-upload text-[10px]"></i>
-            <span>Upload</span>
-          </button>
-          <button class="flex items-center space-x-1 border border-[#cbd5e1] rounded px-3 py-1 text-[#334155] text-xs font-semibold hover:bg-[#f1f5f9]">
-            <i class="fas fa-filter text-[10px]"></i>
-            <span>Filter</span>
-          </button>
-          <input
-            type="search"
-            placeholder="Search"
-            class="ml-auto border border-[#cbd5e1] rounded px-3 py-1 text-xs text-[#64748b] placeholder:text-[#94a3b8] focus:outline-none focus:ring-1 focus:ring-[#0f172a] focus:border-[#0f172a]"
-          />
-        </div>
+        <?php
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
+        $dbname = "sepakung";
 
-        <div class="overflow-x-auto scrollbar-thin border border-[#cbd5e1] rounded">
-          <table class="min-w-full text-xs text-left text-[#334155]">
-            <thead class="bg-[#f1f5f9] text-[#64748b]">
+        $conn = new mysqli($host, $user, $pass, $dbname);
+        if ($conn->connect_error) {
+            die("Koneksi gagal: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT id, judul, deskripsi, tanggal FROM berita ORDER BY tanggal DESC";
+        $result = $conn->query($sql);
+        $berita = [];
+
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $berita[] = $row;
+            }
+        }
+        $conn->close();
+        ?>
+
+        <?php if (count($berita) > 0): ?>
+        <div class="overflow-x-auto">
+          <table class="min-w-full table-auto">
+            <thead class="bg-gray-200 text-left">
               <tr>
-                <th class="w-6 px-3 py-2">
-                  <input type="checkbox" aria-label="Select all contacts" class="cursor-pointer" />
-                </th>
-                <th class="px-3 py-2 font-semibold">NAME</th>
-                <th class="px-3 py-2 font-semibold">SURNAME</th>
-                <th class="px-3 py-2 font-semibold">PHONE NUMBER</th>
-                <th class="px-3 py-2 font-semibold">EMAIL</th>
-                <th class="px-3 py-2 font-semibold">LISTS</th>
-                <th class="px-3 py-2 font-semibold">TAGS</th>
-                <th class="w-14 px-3 py-2"></th>
+                <th class="py-3 px-4">Foto</th>
+                <th class="py-3 px-4">Judul</th>
+                <th class="py-3 px-4">Tanggal</th>
+                <th class="py-3 px-4">Deskripsi</th>
+                <th class="py-3 px-4">Aksi</th>
               </tr>
             </thead>
             <tbody>
-              <!-- 15 rows as in screenshot -->
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
+              <?php foreach ($berita as $row): ?>
+              <tr class="hover:bg-gray-100">
+                <td class="py-3 px-4">
+                  <img src="tampil-gambar-berita.php?id=<?php echo $row['id']; ?>" alt="<?php echo $row['judul']; ?>" class="w-16 h-16 object-cover rounded" />
                 </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
+                <td class="py-3 px-4 font-semibold text-gray-800"><?php echo htmlspecialchars($row['judul']); ?></td>
+                <td class="py-3 px-4 text-gray-600"><?php echo date("d M Y H:i", strtotime($row['tanggal'])); ?></td>
+                <td class="py-3 px-4 text-gray-700 max-w-xs overflow-hidden text-ellipsis">
+                  <?php echo nl2br(htmlspecialchars(mb_strimwidth($row['deskripsi'], 0, 100, '...'))); ?>
                 </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
+                <td class="py-3 px-4 space-x-2">
+                  <a href="edit-berita.php?id=<?= $row['id']; ?>" class="text-blue-600 hover:underline">Edit</a>
+                  <a href="hapus-berita.php?id=<?= $row['id']; ?>" onclick="return confirm('Yakin ingin menghapus berita ini?')" class="text-red-600 hover:underline">Hapus</a>
                 </td>
               </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr class="border-t border-[#cbd5e1] hover:bg-[#f8fafc]">
-                <td class="px-3 py-2">
-                  <input type="checkbox" aria-label="Select contact" class="cursor-pointer" />
-                </td>
-                <td class="px-3 py-2 font-medium text-[#334155]">Wan</td>
-                <td class="px-3 py-2">Gergin</td>
-                <td class="px-3 py-2">731-767-1344</td>
-                <td class="px-3 py-2 text-[#64748b]">aranna.silman@hotmail.com</td>
-                <td class="px-3 py-2">23</td>
-                <td class="px-3 py-2 flex space-x-1">
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Development</span>
-                  <span class="bg-[#e0e7ff] text-[#3730a3] rounded-full px-2 py-0.5">Marketing</span>
-                </td>
-                <td class="px-3 py-2 flex space-x-2 text-[#64748b]">
-                  <button aria-label="Edit contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-pencil-alt text-xs"></i>
-                  </button>
-                  <button aria-label="Delete contact" class="hover:text-[#0f172a]">
-                    <i class="fas fa-trash-alt text-xs"></i>
-                  </button>
-                </td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
-
-        <nav class="flex items-center justify-center space-x-2 mt-4 text-[#64748b] text-xs select-none">
-          <button aria-label="Previous page" class="p-1 hover:text-[#0f172a]">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="px-2 py-1 rounded border border-[#cbd5e1] text-[#0f172a] font-semibold">1</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">2</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">3</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">4</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">5</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">6</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">7</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">8</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">9</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">10</button>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">11</button>
-          <span class="px-2 py-1">...</span>
-          <button class="px-2 py-1 rounded hover:bg-[#f1f5f9]">126</button>
-          <button aria-label="Next page" class="p-1 hover:text-[#0f172a]">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </nav>
-      </main>
-    </div>
+        <?php else: ?>
+          <p class="text-gray-600">Belum ada berita yang ditambahkan.</p>
+        <?php endif; ?>
+      </div>
+    </main>
   </div>
 </body>
 </html>
