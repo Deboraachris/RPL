@@ -44,9 +44,10 @@
       <i class="fas fa-cog">
       </i>
      </a>
-     <button aria-label="Messages" class="text-white text-xl flex justify-center items-center relative">
+     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
       <i class="fas fa-envelope">
       </i>
+     </a>
       <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
        7
       </span>
