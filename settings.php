@@ -54,10 +54,10 @@
       <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
        7
       </span> </a>
-     <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
-      <i class="fas fa-question-circle">
-      </i>
-     </button>
+     <a aria-label="Tambah Admin" class="text-white text-xl flex justify-center items-center" href="adminBaru.php">
+  <i class="fas fa-user-plus"></i>
+</a>
+
     </nav>
    </aside>
    <div class="flex-1 flex flex-col min-w-0">
