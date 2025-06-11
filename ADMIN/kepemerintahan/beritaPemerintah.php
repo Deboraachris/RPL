@@ -60,18 +60,16 @@ $conn->close();
     <aside class="bg-[#6B916B] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none flex-shrink-0">
       <div class="text-center text-sm font-semibold leading-tight tracking-wide">Admin<br>Sepakung</div>
       <nav class="flex flex-col space-y-10 mt-6">
-        <a href="dashboard.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-home"></i></a>
-        <a href="berita.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-newspaper"></i></a>
-        <a href="event.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-bullhorn"></i></a>
-        <a href="beritaPemerintah.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-landmark"></i></a>
-        <a href="calender.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-calendar-alt"></i></a>
-        <a href="settings.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-cog"></i></a>
-        <a href="kritiksaran.php" class="text-white text-xl flex justify-center items-center relative">
-          <i class="fas fa-envelope"></i>
-          <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span>
-        </a>
-        <a href="adminBaru.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-user-plus"></i></a>
-      </nav>
+    <a href="/sepakung/admin/dashboard.php" class="text-white text-xl flex justify-center items-center" title="Dashboard"><i class="fas fa-home"></i></a>
+    <a href="/sepakung/admin/berita/berita.php" class="text-white text-xl flex justify-center items-center" title="Berita Umum"><i class="fas fa-newspaper"></i></a>
+    <a href="/sepakung/admin/eventt/event.php" class="text-white text-xl flex justify-center items-center" title="Event"><i class="fas fa-bullhorn"></i></a>
+    <a href="/sepakung/admin/kepemerintahan/beritaPemerintah.php" class="text-white text-xl flex justify-center items-center" title="Berita Pemerintah"><i class="fas fa-landmark"></i></a>
+    <a href="/sepakung/admin/wisata/wisataa.php" class="text-white text-xl flex justify-center items-center" tittle="Wisata"><i class="fas fa-map"></i></a>
+    <a href="/sepakung/admin/calender.php" class="text-white text-xl flex justify-center items-center" title="Kalender"><i class="fas fa-calendar-alt"></i></a>
+    <a href="/sepakung/admin/kritiksaran.php" class="text-white text-xl flex justify-center items-center relative" title="Kritik & Saran"><i class="fas fa-envelope"></i><span class="absolute -top-1 -right-1 bg-red-500 text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span></a>
+    <a href="/sepakung/admin/adminAdmin/adminBaru.php" class="text-white text-xl flex justify-center items-center" title="Tambah Admin"><i class="fas fa-user-plus"></i></a>
+    <a href="/sepakung/admin/settings.php" class="text-white text-xl flex justify-center items-center" title="Pengaturan"><i class="fas fa-cog"></i></a>
+  </nav>
     </aside>
 
     <!-- Main Content -->
@@ -91,15 +89,15 @@ $conn->close();
           <?php if (count($berita_pemerintah) > 0): ?>
             <div class="overflow-x-auto">
               <table class="min-w-full table-auto">
-                <thead class="bg-gray-200 text-left">
-                  <tr>
-                    <th class="py-3 px-4">Foto</th>
-                    <th class="py-3 px-4">Judul</th>
-                    <th class="py-3 px-4">Tanggal</th>
-                    <th class="py-3 px-4">Deskripsi</th>
-                    <th class="py-3 px-4">Aksi</th>
-                  </tr>
-                </thead>
+                <thead class="bg-[#e9ffdb]">
+                <tr>
+                  <th class="py-3 px-4">Foto</th>
+                  <th class="py-3 px-4">Judul</th>
+                  <th class="py-3 px-4">Tanggal</th>
+                  <th class="py-3 px-4">Deskripsi</th>
+                  <th class="py-3 px-4">Aksi</th>
+                </tr>
+              </thead>
                 <tbody>
                   <?php foreach ($berita_pemerintah as $row): ?>
                     <tr class="hover:bg-gray-100">

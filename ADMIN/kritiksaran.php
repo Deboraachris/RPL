@@ -24,36 +24,16 @@
      Sepakung
     </div>
     <nav class="flex flex-col space-y-10 mt-6">
-     <a href="dashboard.php" aria-label="Home" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-home"></i>
-    </a>
-    <a href="berita.php" aria-label="Berita" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-newspaper"></i>
-    </a>
-    <a href="event.php" aria-label="Event" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-bullhorn"></i>
-    </a>
-    <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-landmark"></i>
-    </a>
-     <a href="calender.php" aria-l  abel="Calender" class="text-white text-xl flex justify-center items-center">
-    <i class="fas fa-calendar-alt"></i>
-    </a>
-    <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
-      <i class="fas fa-cog">
-      </i>
-     </a>
-     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
-      <i class="fas fa-envelope">
-      </i>
-      <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
-       7
-      </span> </a>
-     <a aria-label="Tambah Admin" class="text-white text-xl flex justify-center items-center" href="adminBaru.php">
-  <i class="fas fa-user-plus"></i>
-</a>
-
-    </nav>
+    <a href="/sepakung/admin/dashboard.php" class="text-white text-xl flex justify-center items-center" title="Dashboard"><i class="fas fa-home"></i></a>
+    <a href="/sepakung/admin/berita/berita.php" class="text-white text-xl flex justify-center items-center" title="Berita Umum"><i class="fas fa-newspaper"></i></a>
+    <a href="/sepakung/admin/eventt/event.php" class="text-white text-xl flex justify-center items-center" title="Event"><i class="fas fa-bullhorn"></i></a>
+    <a href="/sepakung/admin/kepemerintahan/beritaPemerintah.php" class="text-white text-xl flex justify-center items-center" title="Berita Pemerintah"><i class="fas fa-landmark"></i></a>
+    <a href="/sepakung/admin/wisata/wisataa.php" class="text-white text-xl flex justify-center items-center" tittle="Wisata"><i class="fas fa-map"></i></a>
+    <a href="/sepakung/admin/calender.php" class="text-white text-xl flex justify-center items-center" title="Kalender"><i class="fas fa-calendar-alt"></i></a>
+    <a href="/sepakung/admin/kritiksaran.php" class="text-white text-xl flex justify-center items-center relative" title="Kritik & Saran"><i class="fas fa-envelope"></i><span class="absolute -top-1 -right-1 bg-red-500 text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span></a>
+    <a href="/sepakung/admin/adminAdmin/adminBaru.php" class="text-white text-xl flex justify-center items-center" title="Tambah Admin"><i class="fas fa-user-plus"></i></a>
+    <a href="/sepakung/admin/settings.php" class="text-white text-xl flex justify-center items-center" title="Pengaturan"><i class="fas fa-cog"></i></a>
+  </nav>
    </aside>
 
     <main class="flex-1 p-6 md:p-10 space-y-6">
