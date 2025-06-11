@@ -7,31 +7,54 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen">
-  <div class="flex">
+<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
     <!-- Sidebar -->
-    <aside class="bg-[#3b5de7] w-16 md:w-20 min-h-screen flex flex-col items-center py-6 space-y-8 text-white">
-      <div class="text-center text-xs font-semibold leading-tight">Admin<br>Sepakung</div>
-      <nav class="flex flex-col space-y-8 mt-6">
-        <a href="dashboard.php" class="text-xl"><i class="fas fa-home"></i></a>
-        <a href="berita.php" class="text-xl"><i class="fas fa-newspaper"></i></a>
-        <a href="event.php" class="text-xl"><i class="fas fa-bullhorn"></i></a>
-        <a href="beritaPemerintah.php" class="text-xl"><i class="fas fa-landmark"></i></a>
-        <a href="calender.php" class="text-xl"><i class="fas fa-calendar-alt"></i></a>
-        <a href="kritiksaran.php" class="text-xl relative">
-          <i class="fas fa-envelope"></i>
-          <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span>
-        </a>
-        <a href="settings.php" class="text-xl"><i class="fas fa-cog"></i></a>
-      </nav>
-    </aside>
+    <aside class="bg-[#6B916B] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
+    <div class="text-center text-sm font-semibold leading-tight tracking-wide">
+     Admin
+     <br/>
+     Sepakung
+    </div>
+    <nav class="flex flex-col space-y-10 mt-6">
+     <a href="dashboard.php" aria-label="Home" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-home"></i>
+    </a>
+    <a href="berita.php" aria-label="Berita" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-newspaper"></i>
+    </a>
+    <a href="event.php" aria-label="Event" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-bullhorn"></i>
+    </a>
+    <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-landmark"></i>
+    </a>
+     <a href="calender.php" aria-l  abel="Calender" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-calendar-alt"></i>
+    </a>
+    <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
+      <i class="fas fa-cog">
+      </i>
+     </a>
+     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
+      <i class="fas fa-envelope">
+      </i>
+      <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
+       7
+      </span> </a>
+     <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
+      <i class="fas fa-question-circle">
+      </i>
+     </button>
+    </nav>
+   </aside>
 
     <!-- Main Content -->
     <main class="flex-1 p-6">
       <div class="bg-white rounded-2xl shadow-lg p-6">
         <div class="flex justify-between items-center mb-6">
           <h1 class="text-2xl font-bold">Daftar Berita</h1>
-          <a href="tambahberita.php" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+          <a href="tambahberita.php" class="bg-[#6B916B] hover:bg-[#ace1af] text-white px-4 py-2 rounded-md">
             + Tambah Berita
           </a>
         </div>

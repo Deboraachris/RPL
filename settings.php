@@ -19,47 +19,41 @@
     }
   </style>
  </head>
- <body class="bg-[#f8fafc] font-sans text-[#1e293b]">
-  <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden min-h-screen">
+<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
    <!-- Sidebar -->
-   <aside class="bg-[#3b5de7] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none flex-shrink-0">
+   <aside class="bg-[#6B916B] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
     <div class="text-center text-sm font-semibold leading-tight tracking-wide">
      Admin
      <br/>
      Sepakung
     </div>
     <nav class="flex flex-col space-y-10 mt-6">
-     <a aria-label="Home" class="text-white text-xl flex justify-center items-center" href="dashboard.php">
-      <i class="fas fa-home">
-      </i>
-     </a>
-     <a aria-label="Berita" class="text-white text-xl flex justify-center items-center" href="berita.php">
-      <i class="fas fa-newspaper">
-      </i>
-     </a>
-     <a aria-label="Event" class="text-white text-xl flex justify-center items-center" href="event.php">
-      <i class="fas fa-bullhorn">
-      </i>
-     </a>
-     <a aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center" href="beritaPemerintah.php">
-      <i class="fas fa-landmark">
-      </i>
-     </a>
-     <a aria-label="Calender" class="text-white text-xl flex justify-center items-center" href="calender.php">
-      <i class="fas fa-calendar-alt">
-      </i>
-     </a>
-     <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
+     <a href="dashboard.php" aria-label="Home" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-home"></i>
+    </a>
+    <a href="berita.php" aria-label="Berita" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-newspaper"></i>
+    </a>
+    <a href="event.php" aria-label="Event" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-bullhorn"></i>
+    </a>
+    <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-landmark"></i>
+    </a>
+     <a href="calender.php" aria-l  abel="Calender" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-calendar-alt"></i>
+    </a>
+    <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
       <i class="fas fa-cog">
       </i>
      </a>
-     <button aria-label="Messages" class="text-white text-xl flex justify-center items-center relative">
+     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
       <i class="fas fa-envelope">
       </i>
       <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
        7
-      </span>
-     </button>
+      </span> </a>
      <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
       <i class="fas fa-question-circle">
       </i>
@@ -147,7 +141,7 @@
            <img alt="Profile picture silhouette of John Doe with a blue background" class="rounded-full bg-gray-300 object-cover w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/a89ab7ab-0372-4fb3-e5dd-5c55422d7fd5.jpg" width="40"/>
            <div class="flex flex-col text-xs font-semibold text-gray-900">
             <span>
-             John Doe
+             Cece
             </span>
             <span class="font-normal text-gray-400">
              Role/Title location

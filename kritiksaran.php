@@ -13,36 +13,56 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-start justify-center p-4">
+<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-center justify-center p-4">
   <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
     
     <!-- Sidebar -->
-    <aside class="bg-[#3b5de7] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
-      <div class="text-center text-sm font-semibold leading-tight tracking-wide">
-        Admin<br/>Sepakung
-      </div>
-      <nav class="flex flex-col space-y-10 mt-6">
-        <a href="dashboard.php" class="text-white text-xl flex justify-center items-center" aria-label="Home"><i class="fas fa-home"></i></a>
-        <a href="berita.php" class="text-white text-xl flex justify-center items-center" aria-label="Berita"><i class="fas fa-newspaper"></i></a>
-        <a href="event.php" class="text-white text-xl flex justify-center items-center" aria-label="Event"><i class="fas fa-bullhorn"></i></a>
-        <a href="beritaPemerintah.php" class="text-white text-xl flex justify-center items-center" aria-label="BeritaPemerintah"><i class="fas fa-landmark"></i></a>
-        <a href="calender.php" class="text-white text-xl flex justify-center items-center" aria-label="Calendar"><i class="fas fa-calendar-alt"></i></a>
-        <a href="settings.php" class="text-white text-xl flex justify-center items-center" aria-label="Settings"><i class="fas fa-cog"></i></a>
-        <button class="text-white text-xl flex justify-center items-center relative" aria-label="Messages">
-          <i class="fas fa-envelope"></i>
-          <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span>
-        </button>
-        <button class="text-white text-xl flex justify-center items-center" aria-label="Help"><i class="fas fa-question-circle"></i></button>
-      </nav>
-    </aside>
+    <aside class="bg-[#6B916B] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
+    <div class="text-center text-sm font-semibold leading-tight tracking-wide">
+     Admin
+     <br/>
+     Sepakung
+    </div>
+    <nav class="flex flex-col space-y-10 mt-6">
+     <a href="dashboard.php" aria-label="Home" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-home"></i>
+    </a>
+    <a href="berita.php" aria-label="Berita" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-newspaper"></i>
+    </a>
+    <a href="event.php" aria-label="Event" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-bullhorn"></i>
+    </a>
+    <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-landmark"></i>
+    </a>
+     <a href="calender.php" aria-l  abel="Calender" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-calendar-alt"></i>
+    </a>
+    <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
+      <i class="fas fa-cog">
+      </i>
+     </a>
+     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
+      <i class="fas fa-envelope">
+      </i>
+      <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
+       7
+      </span> </a>
+     <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
+      <i class="fas fa-question-circle">
+      </i>
+     </button>
+    </nav>
+   </aside>
 
     <main class="flex-1 p-6 md:p-10 space-y-6">
-      <h1 class="text-2xl md:text-3xl font-bold text-[#3b5de7] mb-4">Kritik & Saran Pengunjung</h1>
+      <h1 class="text-2xl md:text-3xl font-bold text-[#6B916B] mb-4">Kritik & Saran Pengunjung</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white border border-gray-100 shadow-md rounded-xl p-5">
           <div class="flex items-center mb-3">
-            <div class="bg-[#3b5de7] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+            <div class="bg-[#6B916B] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
               <i class="fas fa-user"></i>
             </div>
             <div>
@@ -57,7 +77,7 @@
 
         <div class="bg-white border border-gray-100 shadow-md rounded-xl p-5">
           <div class="flex items-center mb-3">
-            <div class="bg-[#3b5de7] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+            <div class="bg-[#6B916B] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
               <i class="fas fa-user"></i>
             </div>
             <div>
@@ -72,7 +92,7 @@
 
         <div class="bg-white border border-gray-100 shadow-md rounded-xl p-5">
           <div class="flex items-center mb-3">
-            <div class="bg-[#3b5de7] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+            <div class="bg-[#6B916B] text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
               <i class="fas fa-user"></i>
             </div>
             <div>

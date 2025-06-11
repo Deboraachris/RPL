@@ -36,64 +36,46 @@
     }
   </style>
 </head>
-<body class="bg-[#ffffff] text-white min-h-screen flex flex-row">
-  <aside
-    class="bg-[#3b5de7] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none flex-shrink-0"
-  >
+<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
+  <aside class="bg-[#6B916B] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
     <div class="text-center text-sm font-semibold leading-tight tracking-wide">
-      Admin
-      <br />
-      Sepakung
+     Admin
+     <br/>
+     Sepakung
     </div>
     <nav class="flex flex-col space-y-10 mt-6">
-      <a
-        href="dashboard.php"
-        aria-label="Home"
-        class="text-white text-xl flex justify-center items-center"
-        ><i class="fas fa-home"></i
-      ></a>
-      <a
-        href="berita.php"
-        aria-label="Berita"
-        class="text-white text-xl flex justify-center items-center"
-        ><i class="fas fa-newspaper"></i
-      ></a>
-      <a
-        href="event.php"
-        aria-label="Event"
-        class="text-white text-xl flex justify-center items-center"
-        ><i class="fas fa-bullhorn"></i
-      ></a>
-      <a
-        href="beritaPemerintah.php"
-        aria-label="BeritaPemerintah"
-        class="text-white text-xl flex justify-center items-center"
-        ><i class="fas fa-landmark"></i
-      ></a>
-      <a
-        href="calender.php"
-        aria-label="Calender"
-        class="text-white text-xl flex justify-center items-center"
-        ><i class="fas fa-calendar-alt"></i
-      ></a>
-      <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
+     <a href="dashboard.php" aria-label="Home" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-home"></i>
+    </a>
+    <a href="berita.php" aria-label="Berita" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-newspaper"></i>
+    </a>
+    <a href="event.php" aria-label="Event" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-bullhorn"></i>
+    </a>
+    <a href="beritaPemerintah.php" aria-label="BeritaPemerintah" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-landmark"></i>
+    </a>
+     <a href="calender.php" aria-l  abel="Calender" class="text-white text-xl flex justify-center items-center">
+    <i class="fas fa-calendar-alt"></i>
+    </a>
+    <a aria-label="Settings" class="text-white text-xl flex justify-center items-center" href="settings.php">
       <i class="fas fa-cog">
       </i>
      </a>
-      <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
+     <a href="kritiksaran.php" aria-label="kritiksaran" class="text-white text-xl flex justify-center items-center relative">
       <i class="fas fa-envelope">
       </i>
       <span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">
        7
       </span> </a>
-      <button
-        aria-label="Help"
-        class="text-white text-xl flex justify-center items-center"
-      >
-        <i class="fas fa-question-circle"></i>
-      </button>
+     <button aria-label="Help" class="text-white text-xl flex justify-center items-center">
+      <i class="fas fa-question-circle">
+      </i>
+     </button>
     </nav>
-  </aside>
+   </aside>
   <div class="px-4 sm:px-6 lg:px-8 py-6 max-w-[1440px] mx-auto w-full flex flex-col overflow-hidden">
     <!-- Header -->
     <header
@@ -110,7 +92,7 @@
       <div class="flex items-center gap-4 w-full sm:w-auto">
         <div class="relative flex-grow sm:flex-grow-0">
           <input
-            class="bg-[#1E1E1E] rounded-md text-gray-400 placeholder-gray-400 text-xs sm:text-sm pl-9 pr-3 py-2 w-full sm:w-64 focus:outline-none focus:ring-1 focus:ring-blue-600"
+            class="bg-[#6B916B] rounded-md text-[#FFFFFF] placeholder-white-400 text-xs sm:text-sm pl-9 pr-3 py-2 w-full sm:w-64 focus:outline-none focus:ring-1 focus:ring-blue-600"
             placeholder="Search ..."
             type="search"
           />
