@@ -18,7 +18,7 @@
  <body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-center justify-center p-4">
   <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
    <!-- Sidebar -->
-   <aside class="bg-[#3b5de7] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
+   <aside class="bg-[#6B916B] w-16 md:w-20 flex flex-col items-center py-8 space-y-8 rounded-l-3xl text-white select-none">
     <div class="text-center text-sm font-semibold leading-tight tracking-wide">
      Admin
      <br/>
@@ -59,9 +59,9 @@
    <!-- Main content -->
    <main class="flex-1 p-6 md:p-6 space-y-6 md:space-y-14">
     <!-- Top banner -->
-    <section class="bg-[#3b5de7] rounded-2xl flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-0 md:justify-between p-6 md:p-8">
+    <section class="bg-[#6B916B] rounded-2xl flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-0 md:justify-between p-6 md:p-8">
      <div class="flex items-center space-x-3 text-white">
-      <div class="bg-[#2a47c9] rounded-md px-3 py-1 text-xs font-semibold flex items-center space-x-2">
+      <div class="bg-[ #8fbc8f] rounded-md px-3 py-1 text-xs font-semibold flex items-center space-x-2">
        <i class="fas fa-calendar-alt text-sm">
        </i>
        <span>
