@@ -37,7 +37,7 @@ if (isset($_GET['tambah']) && $_GET['tambah'] == 'berhasil') {
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
     </style>
 </head>
-<body class="bg-gradient-to-br from-[#f0f2ff] via-[#e9ebff] to-[#f7f7ff] min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-[#e9ffdb] via-[#e9ffdb] to-[#e9ffdb] min-h-screen flex items-center justify-center p-4">
 
 <div class="max-w-[2200px] w-full bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col md:flex-row overflow-hidden">
 
@@ -51,7 +51,7 @@ if (isset($_GET['tambah']) && $_GET['tambah'] == 'berhasil') {
             <a href="beritaPemerintah.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-landmark"></i></a>
             <a href="calender.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-calendar-alt"></i></a>
             <a href="settings.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-cog"></i></a>
-            <a href="kritiksaran.php" class="text-white text-xl flex justify-center items-center relative"><i class="fas fa-envelope"></i><span class="absolute -top-1 -right-1 bg-[#ff4d4f] text-[10px] font-semibold rounded-full w-4 h-4 flex items-center justify-center">7</span></a>
+            <a href="kritiksaran.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-envelope"></i></a>
             <a href="adminBaru.php" class="text-white text-xl flex justify-center items-center"><i class="fas fa-user-plus"></i></a>
         </nav>
     </aside>
