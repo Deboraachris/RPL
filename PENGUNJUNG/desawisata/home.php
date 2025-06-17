@@ -38,21 +38,63 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>DESA <em>SEPAKUNG</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>PEMERINTAHAN DESA <em>SEPAKUNG</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home
+                    <a class="nav-link" href="home.html">Home
                       <span class="sr-only">(current)</span>
                     </a>
                 </li> 
 
-                <li class="nav-item"><a class="nav-link" href="packages.html">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil</a>
+                    
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="strukturOrganisasi.php">Struktur Organisasi</a>
+                      <a class="dropdown-item" href="geografi.php">Geografi</a>
+                      <a class="dropdown-item" href="kesehatan.php">Kesehatan</a>
+                      <a class="dropdown-item" href="kesehatan.php">Kesehatan</a>
+                      <a class="dropdown-item" href="penduduk.php">Penduduk</a>
+                      <a class="dropdown-item" href="perekonomian.php">Perekonomian</a>
+                      <a class="dropdown-item" href="potensiDesa.php">Potensi Desa</a>
+                      <a class="dropdown-item" href="sarpras.php">Sarpras</a>
+                    </div>
+                </li>
 
-                <li class="nav-item"><a class="nav-link" href="blog.html">Berita</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dusun</a>
+                    
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="krajan.php">Krajan</a>
+                      <a class="dropdown-item" href="watulawang.php">Pagerdedog</a>
+                      <a class="dropdown-item" href="gojati.php">Gojati</a>
+                      <a class="dropdown-item" href="bungkah.php">Bungkah</a>
+                      <a class="dropdown-item" href="sepakungWetan.php">Sepakung Wetan</a>
+                      <a class="dropdown-item" href="batur.php">Batur</a>
+                      <a class="dropdown-item" href="gowono.php">Gowono</a>
+                      <a class="dropdown-item" href="nglimut.php">Nglimut</a>
+                      <a class="dropdown-item" href="kenongo.php">Kenongo</a>
+                      <a class="dropdown-item" href="jingkol.php">Jingkol</a>
+                      <a class="dropdown-item" href="srandil.php">Srandil</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PPID</a>
+                    
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="profilPPID.php">Profil PPID</a>
+                      <a class="dropdown-item" href="watulawang.php">Pagerdedog</a>
+                      <a class="dropdown-item" href="gojati.php">Gojati</a>
+                      <a class="dropdown-item" href="bungkah.php">Bungkah</a>
+                      <a class="dropdown-item" href="sepakungWetan.php">Sepakung Wetan</a>
+                      <a class="dropdown-item" href="batur.php">Batur</a>
+                    </div>
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Informasi</a>
