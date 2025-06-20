@@ -21,15 +21,21 @@
 
         /* Header Section */
         .header {
-            position: sticky;
-            top: 0;
-            background-color: rgba(34, 34, 34, 0.9);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
+    position: sticky;
+    top: 0;
+    background-color: rgba(34, 34, 34, 0.9);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000; /* Tambahkan ini */
+}
+
+.dropdown-menu {
+    z-index: 1001; /* Tambahkan ini juga agar tetap di atas hero */
+}
+
 
         .logo {
             font-size: 24px;
@@ -47,6 +53,45 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        .nav-links li {
+        position: relative;
+        }
+
+
+        .dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4a90e2; /* biru seperti di gambar */
+    min-width: 200px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #6faaf0;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #357ABD;
+}
+
+/* Tampilkan saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 
         .hero {
     position: relative;
@@ -222,13 +267,58 @@
         <div class="logo">Pemerintah Desa Sepakung</div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profil</a></li>
-                <li><a href="#">Dusun</a></li>
-                <li><a href="#">PPID</a></li>
+                <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Profil</a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Struktur Organisasi</a></li>
+                    <li><a href="#">Geografi</a></li>
+                    <li><a href="#">Kesehatan</a></li>
+                    <li><a href="#">Penduduk</a></li>
+                    <li><a href="#">Perekonomian</a></li>
+                    <li><a href="#">Potensi Desa</a></li>
+                    <li><a href="#">Sarpras</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Dusun</a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Krajan</a></li>
+                    <li><a href="#">Pagergedog</a></li>
+                    <li><a href="#">Watulawang</a></li>
+                    <li><a href="#">Gojati</a></li>
+                    <li><a href="#">Bungkah</a></li>
+                    <li><a href="#">Sepakung Wetan</a></li>
+                    <li><a href="#">Batur</a></li>
+                    <li><a href="#">Gowono</a></li>
+                    <li><a href="#">Nglimut</a></li>
+                    <li><a href="#">Kenongo</a></li>
+                    <li><a href="#">Jingkol</a></li>
+                    <li><a href="#">Srandil</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">PPID</a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Profil PPID</a></li>
+                    <li><a href="#">Struktur Organisasi PPID</a></li>
+                    <li><a href="#">Maklumat Pelayanan PPID</a></li>
+                    <li><a href="#">Standar Pelayanan Informasi</a></li>
+                    <li><a href="#">Tugas PPID</a></li>
+                    <li><a href="#">Form Pengajuan Informasi</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Aplikasi Pamdes V2</a></li>
                 <li><a href="#">Wisata Sepakung</a></li>
-                <li><a href="#">Media Sosial</a></li>
+                <li class="dropdown">
+                    <a href="#">Media Sosial</a>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Hubungi Kami</a></li>
             </ul>
         </nav>
