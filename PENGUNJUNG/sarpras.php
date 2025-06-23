@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Struktur Organisasi | Pemerintah Desa Sepakung</title>
+  <title>Sarana Prasarana | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,24 +58,27 @@
     }
 
     .navbar a {
-      text-decoration: none;
-      padding: 12px 16px;
-      color: #111;
-      font-weight: bold;
-      border-bottom: 4px solid transparent;
-      transition: 0.3s;
-    }
+  text-decoration: none;
+  padding: 12px 16px; /* <--- bisa kamu ubah jadi: */
+  padding: 8px 16px; /* kurangi padding vertikal agar garis dekat teks */
+  color: #111;
+  font-weight: bold;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+  display: inline-block;
+}
 
-    .navbar a:hover {
-      border-bottom: 4px solid #f44336;
-    }
+.navbar a:hover {
+  border-bottom: 4px solid #f44336;
+}
+
 
     .nav-links {
   list-style: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav-links li {
@@ -294,18 +297,46 @@
 </nav>
 
 
-  <div class="container">
-    <h2>STRUKTUR ORGANISASI</h2>
+  <h2>SARANA DAN PRASARANA DESA SEPAKUNG</h2>
 
-    <div class="share-buttons">
-      <button>🔗 Share</button>
-      <button>📌 Pin it</button>
-      <button>🐦 Tweet</button>
-      <button>📤 Send</button>
-    </div>
+<p>
+  Desa Sepakung terus berbenah dalam menyediakan berbagai sarana dan prasarana guna mendukung aktivitas masyarakat, meningkatkan pelayanan publik, serta mendorong pembangunan berkelanjutan. Berikut adalah beberapa sarana dan prasarana yang tersedia:
+</p>
 
-    <img class="struktur-img" src="https://sepakung.id/wp-content/uploads/2023/06/struktor-desaaaaaa.jpg" alt="Struktur Organisasi Desa Sepakung">
-  </div>
+<ul>
+  <li>🏫 <strong>Pendidikan:</strong> Terdapat beberapa unit pendidikan formal seperti PAUD, TK, SD, dan SMP, serta kegiatan pendidikan nonformal seperti PKBM dan pelatihan keterampilan.</li>
+  
+  <li>🏥 <strong>Kesehatan:</strong> Fasilitas kesehatan yang tersedia meliputi Puskesmas Pembantu, Posyandu, dan Poskesdes, serta layanan mobil ambulance desa.</li>
+  
+  <li>🏢 <strong>Perkantoran:</strong> Kantor Kepala Desa, Balai Desa, dan gedung serbaguna sebagai pusat pelayanan administratif dan kegiatan masyarakat.</li>
+  
+  <li>⛪ <strong>Tempat Ibadah:</strong> Beberapa masjid, musala, dan gereja sebagai sarana kegiatan keagamaan warga desa.</li>
+  
+  <li>🛣️ <strong>Infrastruktur Jalan:</strong> Jalan desa sudah sebagian besar teraspal dan dapat diakses kendaraan roda dua dan empat, termasuk jalan usaha tani dan jalan lingkungan.</li>
+  
+  <li>📶 <strong>Telekomunikasi & Internet:</strong> Jaringan sinyal seluler tersedia di hampir seluruh wilayah, ditambah Wi-Fi publik di beberapa titik strategis.</li>
+  
+  <li>🚰 <strong>Air Bersih:</strong> Jaringan pipanisasi air bersih dari sumber mata air pegunungan sudah menjangkau sebagian besar rumah warga.</li>
+  
+  <li>⚽ <strong>Olahraga & Rekreasi:</strong> Tersedia lapangan sepak bola, lapangan voli, dan beberapa taman desa untuk kegiatan olahraga dan rekreasi masyarakat.</li>
+</ul>
+
+<p>
+  Dokumentasi visual beberapa sarana dan prasarana di Desa Sepakung:
+</p>
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/balai-desa-sepakung.jpg"
+     alt="Balai Desa Sepakung"
+     style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/sarana-kesehatan.jpg"
+     alt="Sarana Kesehatan Desa Sepakung"
+     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
+
+
+
+
+
 
   <footer class="footer-info">
   <div class="footer-container">

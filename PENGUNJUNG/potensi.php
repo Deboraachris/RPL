@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Struktur Organisasi | Pemerintah Desa Sepakung</title>
+  <title>Potensi Desa | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,24 +58,27 @@
     }
 
     .navbar a {
-      text-decoration: none;
-      padding: 12px 16px;
-      color: #111;
-      font-weight: bold;
-      border-bottom: 4px solid transparent;
-      transition: 0.3s;
-    }
+  text-decoration: none;
+  padding: 12px 16px; /* <--- bisa kamu ubah jadi: */
+  padding: 8px 16px; /* kurangi padding vertikal agar garis dekat teks */
+  color: #111;
+  font-weight: bold;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+  display: inline-block;
+}
 
-    .navbar a:hover {
-      border-bottom: 4px solid #f44336;
-    }
+.navbar a:hover {
+  border-bottom: 4px solid #f44336;
+}
+
 
     .nav-links {
   list-style: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav-links li {
@@ -294,18 +297,36 @@
 </nav>
 
 
-  <div class="container">
-    <h2>STRUKTUR ORGANISASI</h2>
+  <h2>POTENSI DESA SEPAKUNG</h2>
 
-    <div class="share-buttons">
-      <button>🔗 Share</button>
-      <button>📌 Pin it</button>
-      <button>🐦 Tweet</button>
-      <button>📤 Send</button>
-    </div>
+<p>
+  Desa Sepakung memiliki berbagai potensi unggulan yang dapat dikembangkan sebagai sumber daya ekonomi, wisata, dan ketahanan pangan desa. Berikut beberapa sektor utama yang menjadi kekuatan Desa Sepakung:
+</p>
 
-    <img class="struktur-img" src="https://sepakung.id/wp-content/uploads/2023/06/struktor-desaaaaaa.jpg" alt="Struktur Organisasi Desa Sepakung">
-  </div>
+<ul>
+  <li>🌿 <strong>Perkebunan:</strong> Kopi, cengkeh, dan alpukat menjadi komoditas utama yang dibudidayakan di lahan perbukitan Desa Sepakung.</li>
+  <li>🌾 <strong>Pertanian:</strong> Padi, jagung, dan hortikultura (cabai, tomat, sayur-sayuran) menjadi tulang punggung sektor pangan masyarakat.</li>
+  <li>💧 <strong>Sumber Mata Air & Irigasi:</strong> Beberapa sumber mata air alami digunakan untuk kebutuhan irigasi dan air bersih.</li>
+  <li>🌄 <strong>Wisata Alam:</strong> Objek wisata seperti Gardu Pandang, Curug Semirang, dan panorama Gunung Telomoyo menjadi daya tarik wisatawan.</li>
+  <li>🐮 <strong>Peternakan:</strong> Ternak sapi, kambing, dan ayam kampung berkembang dalam skala rumah tangga maupun kelompok tani.</li>
+  <li>🧑‍🎨 <strong>Kriya & Produk Lokal:</strong> Anyaman bambu, kerajinan tangan, serta produk olahan seperti kopi bubuk dan gula semut.</li>
+</ul>
+
+<p>
+  Berikut ini merupakan dokumentasi visual potensi unggulan Desa Sepakung:
+</p>
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/perkebunan-sepakung.jpg"
+     alt="Perkebunan Kopi dan Cengkeh"
+     style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/wisata-sepakung.jpg"
+     alt="Wisata Alam Desa Sepakung"
+     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
+
+
+
+
 
   <footer class="footer-info">
   <div class="footer-container">

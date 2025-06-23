@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Struktur Organisasi | Pemerintah Desa Sepakung</title>
+  <title>Penduduk | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,24 +58,27 @@
     }
 
     .navbar a {
-      text-decoration: none;
-      padding: 12px 16px;
-      color: #111;
-      font-weight: bold;
-      border-bottom: 4px solid transparent;
-      transition: 0.3s;
-    }
+  text-decoration: none;
+  padding: 12px 16px; /* <--- bisa kamu ubah jadi: */
+  padding: 8px 16px; /* kurangi padding vertikal agar garis dekat teks */
+  color: #111;
+  font-weight: bold;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+  display: inline-block;
+}
 
-    .navbar a:hover {
-      border-bottom: 4px solid #f44336;
-    }
+.navbar a:hover {
+  border-bottom: 4px solid #f44336;
+}
+
 
     .nav-links {
   list-style: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav-links li {
@@ -294,18 +297,33 @@
 </nav>
 
 
-  <div class="container">
-    <h2>STRUKTUR ORGANISASI</h2>
+  <h2>DATA PENDUDUK DESA SEPAKUNG</h2>
 
-    <div class="share-buttons">
-      <button>🔗 Share</button>
-      <button>📌 Pin it</button>
-      <button>🐦 Tweet</button>
-      <button>📤 Send</button>
-    </div>
+<p>
+  Berikut adalah data statistik penduduk Desa Sepakung berdasarkan hasil pendataan tahun 2024:
+</p>
 
-    <img class="struktur-img" src="https://sepakung.id/wp-content/uploads/2023/06/struktor-desaaaaaa.jpg" alt="Struktur Organisasi Desa Sepakung">
-  </div>
+<ul>
+  <li>👨‍👩‍👧‍👦 <strong>Total Penduduk:</strong> 3.874 jiwa</li>
+  <li>🧍‍♂️ <strong>Laki-laki:</strong> 1.962 jiwa</li>
+  <li>🧍‍♀️ <strong>Perempuan:</strong> 1.912 jiwa</li>
+  <li>🏘️ <strong>Jumlah Kepala Keluarga (KK):</strong> 1.120 KK</li>
+</ul>
+
+<p>
+  Distribusi penduduk berdasarkan jenis kelamin dan jumlah KK ditunjukkan dalam grafik berikut:
+</p>
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-gender-penduduk.png"
+     alt="Diagram Jenis Kelamin Penduduk"
+     style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-kk-sepakung.png"
+     alt="Grafik Jumlah Kepala Keluarga"
+     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
+
+
+
 
   <footer class="footer-info">
   <div class="footer-container">

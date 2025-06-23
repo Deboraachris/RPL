@@ -226,7 +226,75 @@
 </head>
 <body>
 
-  <?php include 'header.php'; ?>
+  <div class="header-top">
+  Penetapan Calon Kepala Desa Sepakung Banyubiru dan Pengambilan nomer urut.
+</div>
+
+<div class="header-main">
+  <img src="/sepakung/foto/g21.png" alt="Logo Semarang">
+  <div class="site-info">
+    <h1>Pemerintah Desa Sepakung</h1>
+    <p>Jalan Kiai Semendi No 4A Sepakung Banyubiru 50664 Kab. Semarang</p>
+  </div>
+</div>
+
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Profil</a>
+      <ul class="dropdown-menu">
+        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
+        <li><a href="/sepakung/pengunjung/geografi.php">Geografi</a></li>
+        <li><a href="/sepakung/pengunjung/kesehatan.php">Kesehatan</a></li>
+        <li><a href="/sepakung/pengunjung/penduduk.php">Penduduk</a></li>
+        <li><a href="/sepakung/pengunjung/perekonomian.php">Perekonomian</a></li>
+        <li><a href="/sepakung/pengunjung/potensi.php">Potensi Desa</a></li>
+        <li><a href="/sepakung/pengunjung/sarpras.php">Sarpras</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">Dusun</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Krajan</a></li>
+        <li><a href="#">Pagergedog</a></li>
+        <li><a href="#">Watulawang</a></li>
+        <li><a href="#">Gojati</a></li>
+        <li><a href="#">Bungkah</a></li>
+        <li><a href="#">Sepakung Wetan</a></li>
+        <li><a href="#">Batur</a></li>
+        <li><a href="#">Gowono</a></li>
+        <li><a href="#">Nglimut</a></li>
+        <li><a href="#">Kenongo</a></li>
+        <li><a href="#">Jingkol</a></li>
+        <li><a href="#">Srandil</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">PPID</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Profil PPID</a></li>
+        <li><a href="#">Struktur Organisasi PPID</a></li>
+        <li><a href="#">Maklumat Pelayanan PPID</a></li>
+        <li><a href="#">Standar Pelayanan Informasi</a></li>
+        <li><a href="#">Tugas PPID</a></li>
+        <li><a href="#">Form Pengajuan Informasi</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Aplikasi Pamdes V2</a></li>
+    <li><a href="#">Wisata Sepakung</a></li>
+    <li class="dropdown">
+      <a href="#">Media Sosial</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Youtube</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Hubungi Kami</a></li>
+  </ul>
+</nav>
 
 
   <h2>GEOGRAFI DESA SEPAKUNG</h2>
