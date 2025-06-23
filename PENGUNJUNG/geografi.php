@@ -226,91 +226,29 @@
 </head>
 <body>
 
-  <div class="header-top">
-    Penetapan Calon Kepala Desa Sepakung Banyubiru dan Pengambilan nomer urut.
-  </div>
-
-  <div class="header-main">
-    <img src="/sepakung/foto/g21.png" alt="Logo Semarang">
-    <div class="site-info">
-      <h1>Pemerintah Desa Sepakung</h1>
-      <p>Jalan Kiai Semendi No 4A Sepakung Banyubiru 50664 Kab. Semarang</p>
-    </div>
-  </div>
-
-  <nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
-    
-    <li class="dropdown">
-      <a href="#">Profil</a>
-      <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-                            <li><a href="#">Geografi</a></li>
-                            <li><a href="#">Kesehatan</a></li>
-                            <li><a href="#">Penduduk</a></li>
-                            <li><a href="#">Perekonomian</a></li>
-                            <li><a href="#">Potensi Desa</a></li>
-                            <li><a href="#">Sarpras</a></li>
-      </ul>
-    </li>
-
-    <li class="dropdown">
-                    <a href="#">Dusun</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Krajan</a></li>
-                    <li><a href="#">Pagergedog</a></li>
-                    <li><a href="#">Watulawang</a></li>
-                    <li><a href="#">Gojati</a></li>
-                    <li><a href="#">Bungkah</a></li>
-                    <li><a href="#">Sepakung Wetan</a></li>
-                    <li><a href="#">Batur</a></li>
-                    <li><a href="#">Gowono</a></li>
-                    <li><a href="#">Nglimut</a></li>
-                    <li><a href="#">Kenongo</a></li>
-                    <li><a href="#">Jingkol</a></li>
-                    <li><a href="#">Srandil</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">PPID</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Profil PPID</a></li>
-                    <li><a href="#">Struktur Organisasi PPID</a></li>
-                    <li><a href="#">Maklumat Pelayanan PPID</a></li>
-                    <li><a href="#">Standar Pelayanan Informasi</a></li>
-                    <li><a href="#">Tugas PPID</a></li>
-                    <li><a href="#">Form Pengajuan Informasi</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Aplikasi Pamdes V2</a></li>
-                <li><a href="#">Wisata Sepakung</a></li>
-                <li class="dropdown">
-                    <a href="#">Media Sosial</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Hubungi Kami</a></li>
-  </ul>
-</nav>
+  <?php include 'header.php'; ?>
 
 
-  <div class="container">
-    <h2>STRUKTUR ORGANISASI</h2>
+  <h2>GEOGRAFI DESA SEPAKUNG</h2>
 
-    <div class="share-buttons">
-      <button>🔗 Share</button>
-      <button>📌 Pin it</button>
-      <button>🐦 Tweet</button>
-      <button>📤 Send</button>
-    </div>
+<p>
+  <strong>Luas wilayah Desa Sepakung</strong> seluas <strong>786,670 Ha</strong>, yang terdiri dari:
+</p>
 
-    <img class="struktur-img" src="https://sepakung.id/wp-content/uploads/2023/06/struktor-desaaaaaa.jpg" alt="Struktur Organisasi Desa Sepakung">
-  </div>
+<ul>
+  <li>🌾 Sawah: 165,120 ha</li>
+  <li>🏡 Pekarangan: 87,200 ha</li>
+  <li>🌿 Tegal: 275,150 ha</li>
+  <li>🌳 Hutan: 192,100 ha</li>
+  <li>📍 Lainnya: 67,100 ha</li>
+</ul>
+
+<br>
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/peta-desa-sepakung.jpg" alt="Peta Wilayah Desa Sepakung" style="width:100%; max-width:1000px; border:4px solid #ccc; border-radius: 8px; margin-bottom:20px;">
+
+<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-chart-sepakung.png" alt="Diagram Sebaran Wilayah" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
+
 
   <footer class="footer-info">
   <div class="footer-container">

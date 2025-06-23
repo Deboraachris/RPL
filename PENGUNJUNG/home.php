@@ -89,34 +89,6 @@
   border-bottom: 3px solid #f44336;
 }
 
-/* Dropdown styles */
-.navbar .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  background-color: #4a90e2;
-  z-index: 999;
-}
-
-.navbar .dropdown-menu li a {
-  color: white;
-  padding: 10px;
-  display: block;
-  text-decoration: none;
-  border-bottom: 1px solid #6faaf0;
-}
-
-.navbar .dropdown-menu li a:hover {
-  background-color: #357ABD;
-}
-
-/* Show dropdown on hover */
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;
-}
-
 @media screen and (max-width: 768px) {
   .header-main {
     flex-direction: column;
@@ -131,37 +103,32 @@
   }
 }
 
-        .dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #4a90e2; /* biru seperti di gambar */
-    min-width: 200px;
-    list-style: none;
-    z-index: 1000;
+        .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  z-index: 1000;
 }
 
 .dropdown-menu li a {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #6faaf0;
-    transition: background-color 0.3s;
+  display: block;
+  padding: 10px;
+  font-weight: normal;
+  color: #111;
+  border-bottom: 1px solid #eee;
 }
 
 .dropdown-menu li a:hover {
-    background-color: #357ABD;
+  background-color: #f2f2f2;
 }
 
-/* Tampilkan saat hover */
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 
@@ -442,81 +409,7 @@
 <body>
 
     <!-- Header -->
-    <div class="header-top">
-  Penetapan Calon Kepala Desa Sepakung Banyubiru dan Pengambilan nomer urut.
-</div>
-
-<div class="header-main">
-  <img src="/sepakung/foto/g21.png" alt="Logo Semarang">
-  <div class="site-info">
-    <h1>Pemerintah Desa Sepakung</h1>
-    <p>Jalan Kiai Semendi No 4A Sepakung Banyubiru 50664 Kab. Semarang</p>
-  </div>
-</div>
-
-<nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
-
-    <li class="dropdown">
-      <a href="#">Profil</a>
-      <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-        <li><a href="#">Geografi</a></li>
-        <li><a href="#">Kesehatan</a></li>
-        <li><a href="#">Penduduk</a></li>
-        <li><a href="#">Perekonomian</a></li>
-        <li><a href="#">Potensi Desa</a></li>
-        <li><a href="#">Sarpras</a></li>
-      </ul>
-    </li>
-
-    <li class="dropdown">
-      <a href="#">Dusun</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Krajan</a></li>
-        <li><a href="#">Pagergedog</a></li>
-        <li><a href="#">Watulawang</a></li>
-        <li><a href="#">Gojati</a></li>
-        <li><a href="#">Bungkah</a></li>
-        <li><a href="#">Sepakung Wetan</a></li>
-        <li><a href="#">Batur</a></li>
-        <li><a href="#">Gowono</a></li>
-        <li><a href="#">Nglimut</a></li>
-        <li><a href="#">Kenongo</a></li>
-        <li><a href="#">Jingkol</a></li>
-        <li><a href="#">Srandil</a></li>
-      </ul>
-    </li>
-
-    <li class="dropdown">
-      <a href="#">PPID</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Profil PPID</a></li>
-        <li><a href="#">Struktur Organisasi PPID</a></li>
-        <li><a href="#">Maklumat Pelayanan PPID</a></li>
-        <li><a href="#">Standar Pelayanan Informasi</a></li>
-        <li><a href="#">Tugas PPID</a></li>
-        <li><a href="#">Form Pengajuan Informasi</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#">Aplikasi Pamdes V2</a></li>
-    <li><a href="#">Wisata Sepakung</a></li>
-
-    <li class="dropdown">
-      <a href="#">Media Sosial</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Youtube</a></li>
-        <li><a href="#">Facebook</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#">Hubungi Kami</a></li>
-  </ul>
-</nav>
+    <?php include 'header.php'; ?>
 
 
     <!-- Hero Section -->
@@ -650,3 +543,5 @@ function showContent(category) {
 
 </body>
 </html>
+
+tolong ini dihubungkan dengan header dan yang berguna bisa dihapus aja

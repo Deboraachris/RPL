@@ -58,27 +58,24 @@
     }
 
     .navbar a {
-  text-decoration: none;
-  padding: 12px 16px; /* <--- bisa kamu ubah jadi: */
-  padding: 8px 16px; /* kurangi padding vertikal agar garis dekat teks */
-  color: #111;
-  font-weight: bold;
-  border-bottom: 4px solid transparent;
-  transition: 0.3s;
-  display: inline-block;
-}
+      text-decoration: none;
+      padding: 12px 16px;
+      color: #111;
+      font-weight: bold;
+      border-bottom: 4px solid transparent;
+      transition: 0.3s;
+    }
 
-.navbar a:hover {
-  border-bottom: 4px solid #f44336;
-}
-
+    .navbar a:hover {
+      border-bottom: 4px solid #f44336;
+    }
 
     .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .nav-links li {
@@ -240,61 +237,27 @@
 
   <nav class="navbar">
   <ul class="nav-links">
-    <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
+    <li><a href="#">Home</a></li>
     
     <li class="dropdown">
       <a href="#">Profil</a>
       <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-                            <li><a href="#">Geografi</a></li>
-                            <li><a href="#">Kesehatan</a></li>
-                            <li><a href="#">Penduduk</a></li>
-                            <li><a href="#">Perekonomian</a></li>
-                            <li><a href="#">Potensi Desa</a></li>
-                            <li><a href="#">Sarpras</a></li>
+        <li><a href="#">Struktur Organisasi</a></li>
+        <li><a href="#">Geografi</a></li>
+        <li><a href="#">Kesehatan</a></li>
+        <li><a href="#">Penduduk</a></li>
+        <li><a href="#">Perekonomian</a></li>
+        <li><a href="#">Potensi Desa</a></li>
+        <li><a href="#">Sarpras</a></li>
       </ul>
     </li>
 
-    <li class="dropdown">
-                    <a href="#">Dusun</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Krajan</a></li>
-                    <li><a href="#">Pagergedog</a></li>
-                    <li><a href="#">Watulawang</a></li>
-                    <li><a href="#">Gojati</a></li>
-                    <li><a href="#">Bungkah</a></li>
-                    <li><a href="#">Sepakung Wetan</a></li>
-                    <li><a href="#">Batur</a></li>
-                    <li><a href="#">Gowono</a></li>
-                    <li><a href="#">Nglimut</a></li>
-                    <li><a href="#">Kenongo</a></li>
-                    <li><a href="#">Jingkol</a></li>
-                    <li><a href="#">Srandil</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">PPID</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Profil PPID</a></li>
-                    <li><a href="#">Struktur Organisasi PPID</a></li>
-                    <li><a href="#">Maklumat Pelayanan PPID</a></li>
-                    <li><a href="#">Standar Pelayanan Informasi</a></li>
-                    <li><a href="#">Tugas PPID</a></li>
-                    <li><a href="#">Form Pengajuan Informasi</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Aplikasi Pamdes V2</a></li>
-                <li><a href="#">Wisata Sepakung</a></li>
-                <li class="dropdown">
-                    <a href="#">Media Sosial</a>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Hubungi Kami</a></li>
+    <li><a href="#">Dusun</a></li>
+    <li><a href="#">PPID</a></li>
+    <li><a href="#">Aplikasi Pamdes V2</a></li>
+    <li><a href="#">Wisata Sepakung</a></li>
+    <li><a href="#">Media Sosial</a></li>
+    <li><a href="#">Kontak</a></li>
   </ul>
 </nav>
 
