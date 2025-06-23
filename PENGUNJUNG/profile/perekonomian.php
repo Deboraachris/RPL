@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Penduduk | Pemerintah Desa Sepakung</title>
+  <title>Perekonomian | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -244,13 +244,13 @@
     <li class="dropdown">
       <a href="#">Profil</a>
       <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-        <li><a href="/sepakung/pengunjung/geografi.php">Geografi</a></li>
-        <li><a href="/sepakung/pengunjung/kesehatan.php">Kesehatan</a></li>
-        <li><a href="/sepakung/pengunjung/penduduk.php">Penduduk</a></li>
-        <li><a href="/sepakung/pengunjung/perekonomian.php">Perekonomian</a></li>
-        <li><a href="/sepakung/pengunjung/potensi.php">Potensi Desa</a></li>
-        <li><a href="/sepakung/pengunjung/sarpras.php">Sarpras</a></li>
+        <li><a href="/sepakung/pengunjung/profile/strukturOrganisasi.php">Struktur Organisasi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/geografi.php">Geografi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/kesehatan.php">Kesehatan</a></li>
+        <li><a href="/sepakung/pengunjung/profile/penduduk.php">Penduduk</a></li>
+        <li><a href="/sepakung/pengunjung/profile/perekonomian.php">Perekonomian</a></li>
+        <li><a href="/sepakung/pengunjung/profile/potensi.php">Potensi Desa</a></li>
+        <li><a href="/sepakung/pengunjung/profile/sarpras.php">Sarpras</a></li>
       </ul>
     </li>
     <li class="dropdown">
@@ -297,29 +297,32 @@
 </nav>
 
 
-  <h2>DATA PENDUDUK DESA SEPAKUNG</h2>
+  <h2>DATA PEKERJAAN & PEREKONOMIAN DESA SEPAKUNG</h2>
 
 <p>
-  Berikut adalah data statistik penduduk Desa Sepakung berdasarkan hasil pendataan tahun 2024:
+  Berikut adalah gambaran kondisi perekonomian masyarakat Desa Sepakung berdasarkan data tahun 2024:
 </p>
 
 <ul>
-  <li>👨‍👩‍👧‍👦 <strong>Total Penduduk:</strong> 3.874 jiwa</li>
-  <li>🧍‍♂️ <strong>Laki-laki:</strong> 1.962 jiwa</li>
-  <li>🧍‍♀️ <strong>Perempuan:</strong> 1.912 jiwa</li>
-  <li>🏘️ <strong>Jumlah Kepala Keluarga (KK):</strong> 1.120 KK</li>
+  <li>💼 <strong>Total Angkatan Kerja:</strong> 2.145 jiwa</li>
+  <li>🌾 <strong>Sektor Pertanian & Perkebunan:</strong> 1.020 jiwa (47%)</li>
+  <li>🧱 <strong>Sektor Konstruksi & Buruh Harian:</strong> 430 jiwa (20%)</li>
+  <li>🛍️ <strong>Perdagangan, UMKM & Jasa:</strong> 390 jiwa (18%)</li>
+  <li>🎒 <strong>Guru, Tenaga Pendidikan & ASN:</strong> 105 jiwa (5%)</li>
+  <li>🚚 <strong>Transportasi & Ekspedisi:</strong> 75 jiwa (3%)</li>
+  <li>🏡 <strong>Ibu Rumah Tangga & Tidak Bekerja:</strong> 125 jiwa (7%)</li>
 </ul>
 
 <p>
-  Distribusi penduduk berdasarkan jenis kelamin dan jumlah KK ditunjukkan dalam grafik berikut:
+  Grafik berikut menunjukkan distribusi pekerjaan warga Desa Sepakung:
 </p>
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-gender-penduduk.png"
-     alt="Diagram Jenis Kelamin Penduduk"
+<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-pekerjaan-sepakung.png"
+     alt="Diagram Sektor Pekerjaan Masyarakat"
      style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-kk-sepakung.png"
-     alt="Grafik Jumlah Kepala Keluarga"
+<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-perekonomian-sepakung.png"
+     alt="Grafik Ekonomi Berdasarkan Jenis Usaha"
      style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
 
 

@@ -426,13 +426,13 @@
     <li class="dropdown">
       <a href="#">Profil</a>
       <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-        <li><a href="/sepakung/pengunjung/geografi.php">Geografi</a></li>
-        <li><a href="/sepakung/pengunjung/kesehatan.php">Kesehatan</a></li>
-        <li><a href="/sepakung/pengunjung/penduduk.php">Penduduk</a></li>
-        <li><a href="/sepakung/pengunjung/perekonomian.php">Perekonomian</a></li>
-        <li><a href="/sepakung/pengunjung/potensi.php">Potensi Desa</a></li>
-        <li><a href="/sepakung/pengunjung/sarpras.php">Sarpras</a></li>
+        <li><a href="/sepakung/pengunjung/profile/strukturOrganisasi.php">Struktur Organisasi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/geografi.php">Geografi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/kesehatan.php">Kesehatan</a></li>
+        <li><a href="/sepakung/pengunjung/profile/penduduk.php">Penduduk</a></li>
+        <li><a href="/sepakung/pengunjung/profile/perekonomian.php">Perekonomian</a></li>
+        <li><a href="/sepakung/pengunjung/profile/potensi.php">Potensi Desa</a></li>
+        <li><a href="/sepakung/pengunjung/profile/sarpras.php">Sarpras</a></li>
       </ul>
     </li>
     <li class="dropdown">

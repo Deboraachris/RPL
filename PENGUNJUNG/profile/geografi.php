@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kesehatan | Pemerintah Desa Sepakung</title>
+  <title>Geografi | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -244,13 +244,13 @@
     <li class="dropdown">
       <a href="#">Profil</a>
       <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-        <li><a href="/sepakung/pengunjung/geografi.php">Geografi</a></li>
-        <li><a href="/sepakung/pengunjung/kesehatan.php">Kesehatan</a></li>
-        <li><a href="/sepakung/pengunjung/penduduk.php">Penduduk</a></li>
-        <li><a href="/sepakung/pengunjung/perekonomian.php">Perekonomian</a></li>
-        <li><a href="/sepakung/pengunjung/potensi.php">Potensi Desa</a></li>
-        <li><a href="/sepakung/pengunjung/sarpras.php">Sarpras</a></li>
+        <li><a href="/sepakung/pengunjung/profile/strukturOrganisasi.php">Struktur Organisasi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/geografi.php">Geografi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/kesehatan.php">Kesehatan</a></li>
+        <li><a href="/sepakung/pengunjung/profile/penduduk.php">Penduduk</a></li>
+        <li><a href="/sepakung/pengunjung/profile/perekonomian.php">Perekonomian</a></li>
+        <li><a href="/sepakung/pengunjung/profile/potensi.php">Potensi Desa</a></li>
+        <li><a href="/sepakung/pengunjung/profile/sarpras.php">Sarpras</a></li>
       </ul>
     </li>
     <li class="dropdown">
@@ -297,42 +297,25 @@
 </nav>
 
 
-  <h2>KONDISI KESEHATAN MASYARAKAT DESA SEPAKUNG</h2>
+  <h2>GEOGRAFI DESA SEPAKUNG</h2>
 
 <p>
-  Berdasarkan data Puskesmas dan Posyandu setempat, berikut adalah ringkasan kondisi kesehatan masyarakat di Desa Sepakung tahun 2024:
+  <strong>Luas wilayah Desa Sepakung</strong> seluas <strong>786,670 Ha</strong>, yang terdiri dari:
 </p>
 
 <ul>
-  <li>👶 <strong>Jumlah Balita Sehat:</strong> 112 anak</li>
-  <li>📉 <strong>Kasus Stunting:</strong> 17 anak (menurun 12% dibanding tahun lalu)</li>
-  <li>🧓 <strong>Lansia yang aktif mengikuti Posyandu:</strong> 85 orang</li>
-  <li>💉 <strong>Warga yang telah menerima vaksin lengkap:</strong> 1.230 jiwa</li>
-  <li>❤️ <strong>Penderita Penyakit Kronis (Hipertensi, Diabetes, Jantung):</strong> 76 orang</li>
-  <li>🩺 <strong>Kegiatan pemeriksaan rutin (check-up, timbang, imunisasi):</strong> dilakukan tiap bulan di 6 titik Posyandu</li>
-</ul>
-
-<p>
-  Pemerintah Desa terus berupaya meningkatkan derajat kesehatan masyarakat dengan program:
-</p>
-
-<ul>
-  <li>📆 Jadwal Posyandu rutin setiap minggu ke-2 tiap bulan</li>
-  <li>🚑 Layanan jemput antar untuk lansia dan disabilitas</li>
-  <li>📚 Edukasi kesehatan ibu & anak oleh kader kesehatan</li>
-  <li>🌱 Program Gizi Tambahan dan PMT Balita</li>
+  <li>🌾 Sawah: 165,120 ha</li>
+  <li>🏡 Pekarangan: 87,200 ha</li>
+  <li>🌿 Tegal: 275,150 ha</li>
+  <li>🌳 Hutan: 192,100 ha</li>
+  <li>📍 Lainnya: 67,100 ha</li>
 </ul>
 
 <br>
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/chart-kesehatan-sepakung.png"
-     alt="Diagram Kondisi Kesehatan Warga"
-     style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
+<img src="https://sepakung.id/wp-content/uploads/2023/06/peta-desa-sepakung.jpg" alt="Peta Wilayah Desa Sepakung" style="width:100%; max-width:1000px; border:4px solid #ccc; border-radius: 8px; margin-bottom:20px;">
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-chart-kesehatan.png"
-     alt="Grafik Status Kesehatan per Kelompok Umur"
-     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
+<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-chart-sepakung.png" alt="Diagram Sebaran Wilayah" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
 
 
   <footer class="footer-info">

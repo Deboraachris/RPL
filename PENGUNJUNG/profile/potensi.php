@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sarana Prasarana | Pemerintah Desa Sepakung</title>
+  <title>Potensi Desa | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -244,13 +244,13 @@
     <li class="dropdown">
       <a href="#">Profil</a>
       <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-        <li><a href="/sepakung/pengunjung/geografi.php">Geografi</a></li>
-        <li><a href="/sepakung/pengunjung/kesehatan.php">Kesehatan</a></li>
-        <li><a href="/sepakung/pengunjung/penduduk.php">Penduduk</a></li>
-        <li><a href="/sepakung/pengunjung/perekonomian.php">Perekonomian</a></li>
-        <li><a href="/sepakung/pengunjung/potensi.php">Potensi Desa</a></li>
-        <li><a href="/sepakung/pengunjung/sarpras.php">Sarpras</a></li>
+        <li><a href="/sepakung/pengunjung/profile/strukturOrganisasi.php">Struktur Organisasi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/geografi.php">Geografi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/kesehatan.php">Kesehatan</a></li>
+        <li><a href="/sepakung/pengunjung/profile/penduduk.php">Penduduk</a></li>
+        <li><a href="/sepakung/pengunjung/profile/perekonomian.php">Perekonomian</a></li>
+        <li><a href="/sepakung/pengunjung/profile/potensi.php">Potensi Desa</a></li>
+        <li><a href="/sepakung/pengunjung/profile/sarpras.php">Sarpras</a></li>
       </ul>
     </li>
     <li class="dropdown">
@@ -297,42 +297,32 @@
 </nav>
 
 
-  <h2>SARANA DAN PRASARANA DESA SEPAKUNG</h2>
+  <h2>POTENSI DESA SEPAKUNG</h2>
 
 <p>
-  Desa Sepakung terus berbenah dalam menyediakan berbagai sarana dan prasarana guna mendukung aktivitas masyarakat, meningkatkan pelayanan publik, serta mendorong pembangunan berkelanjutan. Berikut adalah beberapa sarana dan prasarana yang tersedia:
+  Desa Sepakung memiliki berbagai potensi unggulan yang dapat dikembangkan sebagai sumber daya ekonomi, wisata, dan ketahanan pangan desa. Berikut beberapa sektor utama yang menjadi kekuatan Desa Sepakung:
 </p>
 
 <ul>
-  <li>🏫 <strong>Pendidikan:</strong> Terdapat beberapa unit pendidikan formal seperti PAUD, TK, SD, dan SMP, serta kegiatan pendidikan nonformal seperti PKBM dan pelatihan keterampilan.</li>
-  
-  <li>🏥 <strong>Kesehatan:</strong> Fasilitas kesehatan yang tersedia meliputi Puskesmas Pembantu, Posyandu, dan Poskesdes, serta layanan mobil ambulance desa.</li>
-  
-  <li>🏢 <strong>Perkantoran:</strong> Kantor Kepala Desa, Balai Desa, dan gedung serbaguna sebagai pusat pelayanan administratif dan kegiatan masyarakat.</li>
-  
-  <li>⛪ <strong>Tempat Ibadah:</strong> Beberapa masjid, musala, dan gereja sebagai sarana kegiatan keagamaan warga desa.</li>
-  
-  <li>🛣️ <strong>Infrastruktur Jalan:</strong> Jalan desa sudah sebagian besar teraspal dan dapat diakses kendaraan roda dua dan empat, termasuk jalan usaha tani dan jalan lingkungan.</li>
-  
-  <li>📶 <strong>Telekomunikasi & Internet:</strong> Jaringan sinyal seluler tersedia di hampir seluruh wilayah, ditambah Wi-Fi publik di beberapa titik strategis.</li>
-  
-  <li>🚰 <strong>Air Bersih:</strong> Jaringan pipanisasi air bersih dari sumber mata air pegunungan sudah menjangkau sebagian besar rumah warga.</li>
-  
-  <li>⚽ <strong>Olahraga & Rekreasi:</strong> Tersedia lapangan sepak bola, lapangan voli, dan beberapa taman desa untuk kegiatan olahraga dan rekreasi masyarakat.</li>
+  <li>🌿 <strong>Perkebunan:</strong> Kopi, cengkeh, dan alpukat menjadi komoditas utama yang dibudidayakan di lahan perbukitan Desa Sepakung.</li>
+  <li>🌾 <strong>Pertanian:</strong> Padi, jagung, dan hortikultura (cabai, tomat, sayur-sayuran) menjadi tulang punggung sektor pangan masyarakat.</li>
+  <li>💧 <strong>Sumber Mata Air & Irigasi:</strong> Beberapa sumber mata air alami digunakan untuk kebutuhan irigasi dan air bersih.</li>
+  <li>🌄 <strong>Wisata Alam:</strong> Objek wisata seperti Gardu Pandang, Curug Semirang, dan panorama Gunung Telomoyo menjadi daya tarik wisatawan.</li>
+  <li>🐮 <strong>Peternakan:</strong> Ternak sapi, kambing, dan ayam kampung berkembang dalam skala rumah tangga maupun kelompok tani.</li>
+  <li>🧑‍🎨 <strong>Kriya & Produk Lokal:</strong> Anyaman bambu, kerajinan tangan, serta produk olahan seperti kopi bubuk dan gula semut.</li>
 </ul>
 
 <p>
-  Dokumentasi visual beberapa sarana dan prasarana di Desa Sepakung:
+  Berikut ini merupakan dokumentasi visual potensi unggulan Desa Sepakung:
 </p>
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/balai-desa-sepakung.jpg"
-     alt="Balai Desa Sepakung"
+<img src="https://sepakung.id/wp-content/uploads/2023/06/perkebunan-sepakung.jpg"
+     alt="Perkebunan Kopi dan Cengkeh"
      style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/sarana-kesehatan.jpg"
-     alt="Sarana Kesehatan Desa Sepakung"
+<img src="https://sepakung.id/wp-content/uploads/2023/06/wisata-sepakung.jpg"
+     alt="Wisata Alam Desa Sepakung"
      style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
 
 
 

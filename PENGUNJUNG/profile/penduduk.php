@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Potensi Desa | Pemerintah Desa Sepakung</title>
+  <title>Penduduk | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -244,13 +244,13 @@
     <li class="dropdown">
       <a href="#">Profil</a>
       <ul class="dropdown-menu">
-        <li><a href="/sepakung/pengunjung/strukturOrganisasi.php">Struktur Organisasi</a></li>
-        <li><a href="/sepakung/pengunjung/geografi.php">Geografi</a></li>
-        <li><a href="/sepakung/pengunjung/kesehatan.php">Kesehatan</a></li>
-        <li><a href="/sepakung/pengunjung/penduduk.php">Penduduk</a></li>
-        <li><a href="/sepakung/pengunjung/perekonomian.php">Perekonomian</a></li>
-        <li><a href="/sepakung/pengunjung/potensi.php">Potensi Desa</a></li>
-        <li><a href="/sepakung/pengunjung/sarpras.php">Sarpras</a></li>
+        <li><a href="/sepakung/pengunjung/profile/strukturOrganisasi.php">Struktur Organisasi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/geografi.php">Geografi</a></li>
+        <li><a href="/sepakung/pengunjung/profile/kesehatan.php">Kesehatan</a></li>
+        <li><a href="/sepakung/pengunjung/profile/penduduk.php">Penduduk</a></li>
+        <li><a href="/sepakung/pengunjung/profile/perekonomian.php">Perekonomian</a></li>
+        <li><a href="/sepakung/pengunjung/profile/potensi.php">Potensi Desa</a></li>
+        <li><a href="/sepakung/pengunjung/profile/sarpras.php">Sarpras</a></li>
       </ul>
     </li>
     <li class="dropdown">
@@ -297,33 +297,30 @@
 </nav>
 
 
-  <h2>POTENSI DESA SEPAKUNG</h2>
+  <h2>DATA PENDUDUK DESA SEPAKUNG</h2>
 
 <p>
-  Desa Sepakung memiliki berbagai potensi unggulan yang dapat dikembangkan sebagai sumber daya ekonomi, wisata, dan ketahanan pangan desa. Berikut beberapa sektor utama yang menjadi kekuatan Desa Sepakung:
+  Berikut adalah data statistik penduduk Desa Sepakung berdasarkan hasil pendataan tahun 2024:
 </p>
 
 <ul>
-  <li>🌿 <strong>Perkebunan:</strong> Kopi, cengkeh, dan alpukat menjadi komoditas utama yang dibudidayakan di lahan perbukitan Desa Sepakung.</li>
-  <li>🌾 <strong>Pertanian:</strong> Padi, jagung, dan hortikultura (cabai, tomat, sayur-sayuran) menjadi tulang punggung sektor pangan masyarakat.</li>
-  <li>💧 <strong>Sumber Mata Air & Irigasi:</strong> Beberapa sumber mata air alami digunakan untuk kebutuhan irigasi dan air bersih.</li>
-  <li>🌄 <strong>Wisata Alam:</strong> Objek wisata seperti Gardu Pandang, Curug Semirang, dan panorama Gunung Telomoyo menjadi daya tarik wisatawan.</li>
-  <li>🐮 <strong>Peternakan:</strong> Ternak sapi, kambing, dan ayam kampung berkembang dalam skala rumah tangga maupun kelompok tani.</li>
-  <li>🧑‍🎨 <strong>Kriya & Produk Lokal:</strong> Anyaman bambu, kerajinan tangan, serta produk olahan seperti kopi bubuk dan gula semut.</li>
+  <li>👨‍👩‍👧‍👦 <strong>Total Penduduk:</strong> 3.874 jiwa</li>
+  <li>🧍‍♂️ <strong>Laki-laki:</strong> 1.962 jiwa</li>
+  <li>🧍‍♀️ <strong>Perempuan:</strong> 1.912 jiwa</li>
+  <li>🏘️ <strong>Jumlah Kepala Keluarga (KK):</strong> 1.120 KK</li>
 </ul>
 
 <p>
-  Berikut ini merupakan dokumentasi visual potensi unggulan Desa Sepakung:
+  Distribusi penduduk berdasarkan jenis kelamin dan jumlah KK ditunjukkan dalam grafik berikut:
 </p>
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/perkebunan-sepakung.jpg"
-     alt="Perkebunan Kopi dan Cengkeh"
-     style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
+<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-gender-penduduk.png"
+     alt="Diagram Jenis Kelamin Penduduk"
+     style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/wisata-sepakung.jpg"
-     alt="Wisata Alam Desa Sepakung"
+<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-kk-sepakung.png"
+     alt="Grafik Jumlah Kepala Keluarga"
      style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
 
 
 
