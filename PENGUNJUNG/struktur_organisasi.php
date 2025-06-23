@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profil Pemerintah Desa Sepakung</title>
+    <title>Struktur Organisasi</title>
     <style>
         /* Reset CSS */
         * {
@@ -117,31 +117,62 @@ ini_set('display_errors', 1);
         }
 
         .footer {
-            background-color: #222;
+            background-color: #333;
             color: white;
             padding: 40px 20px;
-            text-align: center;
-            margin-top: 50px;
+            font-family: system-ui, sans-serif;
         }
 
-        .footer h2 {
-            font-size: 32px;
+        .footer-container {
+            display: flex;
+            justify-content: center;
             margin-bottom: 20px;
         }
 
-        .footer button {
-            padding: 10px 20px;
-            background-color: #ffcc00;
-            color: black;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .footer-info {
+            background-color: #2f2f2f;
+            padding: 25px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
         }
 
-        .footer button:hover {
-            background-color: #e6b800;
+        .footer-info:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-info h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .footer-info p {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        .footer-info a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: #aaa;
         }
     </style>
 </head>
@@ -158,8 +189,8 @@ ini_set('display_errors', 1);
                     <a href="profil_pemerintahan.php">Profil</a>
                     <ul class="dropdown-menu">
                         <li><a href="struktur_organisasi.php">Struktur Organisasi</a></li>
-                        <li><a href="#">Geografi</a></li>
-                        <li><a href="#">Kesehatan</a></li>
+                        <li><a href="geografi.php">Geografi</a></li>
+                        <li><a href="kesehatan.php">Kesehatan</a></li>
                         <li><a href="#">Penduduk</a></li>
                         <li><a href="#">Perekonomian</a></li>
                         <li><a href="#">Potensi Desa</a></li>
@@ -218,12 +249,23 @@ ini_set('display_errors', 1);
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <h2>About The Summit</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-        <button>LEARN MORE</button>
-    </footer>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>INFO</h3>
+            <p><strong>KANTOR DESA SEPAKUNG</strong></p>
+            <p>📱 Whatsapp :</p>
+            <p>✉️ Email : <a href="mailto:sepakung.id@gmail.com">sepakung.id@gmail.com</a></p>
+            <p><strong>Waktu Operasional :</strong></p>
+            <p>Senin – Kamis : 08.00 – 15.30 WIB</p>
+            <p>Jum’at : 08.00 – 11.30 WIB</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Pemerintah Desa Sepakung | Kecamatan Banyubiru Kabupaten Semarang</p>
+    </div>
+</footer>
 
 </body>
 

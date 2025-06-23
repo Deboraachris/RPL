@@ -17,12 +17,14 @@ ini_set('display_errors', 1);
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(to bottom, #f4f4f4, #fff);
         }
+
         .header {
             position: sticky;
             top: 0;
@@ -34,20 +36,24 @@ ini_set('display_errors', 1);
             padding: 15px 20px;
             z-index: 1000;
         }
+
         .nav-links {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         .nav-links li {
             position: relative;
         }
+
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: bold;
             padding: 10px;
         }
+
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -61,6 +67,7 @@ ini_set('display_errors', 1);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
             z-index: 1001;
         }
+
         .dropdown-menu li a {
             display: block;
             padding: 10px 20px;
@@ -69,36 +76,45 @@ ini_set('display_errors', 1);
             border-bottom: 1px solid #6faaf0;
             transition: background-color 0.3s;
         }
+
         .dropdown-menu li:last-child a {
             border-bottom: none;
         }
+
         .dropdown-menu li a:hover {
             background-color: #357ABD;
         }
+
         .dropdown:hover .dropdown-menu {
             display: block;
         }
+
         .section {
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
+            text-align: center;
         }
+
         .section h2 {
             font-size: 32px;
             margin-bottom: 20px;
             color: #222;
-            text-align: center;
         }
-        .section h3 {
-            font-size: 24px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-        .section p, .section li {
-            font-size: 18px;
-            margin-bottom: 10px;
+
+        .section p {
+            font-size: 20px;
+            margin-bottom: 30px;
             color: #555;
         }
+
+        .section img {
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
         .footer {
             background-color: #333;
             color: white;
@@ -157,91 +173,95 @@ ini_set('display_errors', 1);
             font-size: 14px;
             color: #aaa;
         }
+
+        .image-stack img {
+            display: block;
+            margin: 0 auto 25px auto; /* Tengah + spasi antar gambar */
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
+
 <body>
 
-<!-- Header -->
-<header class="header">
-    <div class="logo">Pemerintah Desa Sepakung</div>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Profil</a>
-                <ul class="dropdown-menu">
-                    <li><a href="struktur_organisasi.php">Struktur Organisasi</a></li>
-                    <li><a href="geografi.php">Geografi</a></li>
-                    <li><a href="kesehatan.php">Kesehatan</a></li>
-                    <li><a href="#">Penduduk</a></li>
-                    <li><a href="#">Perekonomian</a></li>
-                    <li><a href="#">Potensi Desa</a></li>
-                    <li><a href="#">Sarpras</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Dusun</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Krajan</a></li>
-                    <li><a href="#">Pagergedog</a></li>
-                    <li><a href="#">Watulawang</a></li>
-                    <li><a href="#">Gojati</a></li>
-                    <li><a href="#">Bungkah</a></li>
-                    <li><a href="#">Sepakung Wetan</a></li>
-                    <li><a href="#">Batur</a></li>
-                    <li><a href="#">Gowono</a></li>
-                    <li><a href="#">Nglimut</a></li>
-                    <li><a href="#">Kenongo</a></li>
-                    <li><a href="#">Jingkol</a></li>
-                    <li><a href="#">Srandil</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">PPID</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Profil PPID</a></li>
-                    <li><a href="#">Struktur Organisasi PPID</a></li>
-                    <li><a href="#">Maklumat Pelayanan PPID</a></li>
-                    <li><a href="#">Standar Pelayanan Informasi</a></li>
-                    <li><a href="#">Tugas PPID</a></li>
-                    <li><a href="#">Form Pengajuan Informasi</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Aplikasi Pamdes V2</a></li>
-            <li><a href="#">Wisata Sepakung</a></li>
-            <li class="dropdown">
-                <a href="#">Media Sosial</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Facebook</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Hubungi Kami</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Pemerintah Desa Sepakung</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Profil</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="struktur_organisasi.php">Struktur Organisasi</a></li>
+                        <li><a href="geografi.php">Geografi</a></li>
+                        <li><a href="kesehatan.php">Kesehatan</a></li>
+                        <li><a href="#">Penduduk</a></li>
+                        <li><a href="#">Perekonomian</a></li>
+                        <li><a href="#">Potensi Desa</a></li>
+                        <li><a href="#">Sarpras</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Dusun</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Krajan</a></li>
+                        <li><a href="#">Pagergedog</a></li>
+                        <li><a href="#">Watulawang</a></li>
+                        <li><a href="#">Gojati</a></li>
+                        <li><a href="#">Bungkah</a></li>
+                        <li><a href="#">Sepakung Wetan</a></li>
+                        <li><a href="#">Batur</a></li>
+                        <li><a href="#">Gowono</a></li>
+                        <li><a href="#">Nglimut</a></li>
+                        <li><a href="#">Kenongo</a></li>
+                        <li><a href="#">Jingkol</a></li>
+                        <li><a href="#">Srandil</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">PPID</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profil PPID</a></li>
+                        <li><a href="#">Struktur Organisasi PPID</a></li>
+                        <li><a href="#">Maklumat Pelayanan PPID</a></li>
+                        <li><a href="#">Standar Pelayanan Informasi</a></li>
+                        <li><a href="#">Tugas PPID</a></li>
+                        <li><a href="#">Form Pengajuan Informasi</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Aplikasi Pamdes V2</a></li>
+                <li><a href="#">Wisata Sepakung</a></li>
+                <li class="dropdown">
+                    <a href="#">Media Sosial</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Isi Halaman -->
+    <!-- Isi Halaman -->
 <section class="section">
-    <h2>PROFIL</h2>
-
-    <h3>Visi</h3>
-    <li>Mewujudkan Desa Sepakung Menjadi Desa Mandiri Melalui Bidang Pertanian, Industri Kecil dan Wisata Desa.</li>
-
-
-    <h3>Misi</h3>
-    <ul>
-        <li>Memperbaiki dan menambah sarana dan prasarana yang dibutuhkan untuk meningkatkan SDM melalui pendidikan formal maupun informal.</li>
-        <li>Bekerja sama dengan petugas penyuluh lapangan untuk meningkatkan hasil pertanian.</li>
-        <li>Meningkatkan usaha Pertanian.</li>
-        <li>Meningkatkan dan mengelola Pendapatan Asli Desa.</li>
-        <li>Mewujudkan pemerintahan yang baik dan bersih melalui pelaksanaan Otonomi Daerah.</li>
-    </ul>
+    <h2>Kondisi Kesehatan Masyarakat Desa Sepakung</h2>
+    <div class="image-stack">
+        <img src="../FOTO/g24.png" alt="Kesehatan Masyarakat Desa Sepakung">
+        <img src="../FOTO/g25.png" alt="Kesehatan Masyarakat Desa Sepakung">
+        <img src="../FOTO/g26.png" alt="Kesehatan Masyarakat Desa Sepakung">
+        <img src="../FOTO/g27.png" alt="Kesehatan Masyarakat Desa Sepakung">
+    </div>
 </section>
 
-<!-- Footer -->
+
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-container">
