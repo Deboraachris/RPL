@@ -1,8 +1,34 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "sepakung";
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, judul, deskripsi, tanggal FROM berita ORDER BY tanggal DESC";
+$result = $conn->query($sql);
+$berita = [];
+
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $berita[] = $row;
+    }
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pemerintahan Desa Sepakung</title>
     <style>
         /* Reset CSS */
@@ -11,7 +37,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
@@ -131,123 +156,133 @@
   display: block;
 }
 
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
+        /* Hero Section */
         .hero {
-    position: relative;
-    background-image: url('../foto/g20.jpg'); /* ganti dengan gambar lokalmu */
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height: 100vh; /* Full layar */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    z-index: 1;
-    overflow: hidden;
-}
+            position: relative;
+            background-image: url('../foto/g20.jpg');
+            background-size: cover;
+            background-position: center top;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 0;
+        }
+        .hero h1, .hero h4, .hero button {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .hero h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            padding: 12px 28px;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .hero button:hover {
+            background-color: #e6b800;
+        }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4); /* Overlay gelap */
-    z-index: 0;
-}
-
-.hero h1, .hero h4, .hero button {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.hero h4 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    padding: 12px 28px;
-    background-color: #ffcc00;
-    color: black;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hero button:hover {
-    background-color: #e6b800;
-}
-
-
-        .background-image-section {
-        background-image: url('../foto/g20.jpg');
-        background-size: cover;
-        background-position: top;
-        height: 500px;
-        width: 100%;
-}
-
+        /* Kategori Button */
         .category-box {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.category-box button {
-    padding: 10px 20px;
-    background-color: #ddd;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.category-box button:hover {
-    background-color: #ffcc00;
-}
-
-
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .category-box button {
+            padding: 12px 24px;
+            background-color: #eee;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .category-box button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
 
         /* Sections */
         .section {
             padding: 50px 20px;
-            text-align: center;
+            max-width: 1200px;
+            margin: auto;
         }
-
         .section h2 {
             font-size: 32px;
             margin-bottom: 20px;
+            color: #222;
         }
-
         .section p {
             margin-bottom: 30px;
         }
 
-        /* Climber Profile Section */
-        .profile {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            margin: 30px 0;
+        /* Story Card */
+        .stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .story-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .story-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .story-card p {
+            color: #666;
+            font-size: 14px;
         }
 
+        /* Profile Section */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+        }
         .profile img {
             border-radius: 50%;
             width: 150px;
@@ -599,15 +634,14 @@
 </footer>
 
 
+    <!-- JS untuk Menampilkan Konten -->
     <script>
-function showContent(category) {
-    document.getElementById("berita").style.display = "none";
-    document.getElementById("event").style.display = "none";
-    document.getElementById("pemerintahan").style.display = "none";
-    document.getElementById(category).style.display = "block";
-}
-</script>
-
-
+        function showContent(category) {
+            document.getElementById("berita").style.display = "none";
+            document.getElementById("event").style.display = "none";
+            document.getElementById("pemerintahan").style.display = "none";
+            document.getElementById(category).style.display = "block";
+        }
+    </script>
 </body>
 </html>
