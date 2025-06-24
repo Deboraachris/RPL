@@ -254,7 +254,7 @@
       </ul>
     </li>
     <li class="dropdown">
-      <a href="#">Dusun</a>
+      <a href="/sepakung/pengunjung/home.php">Dusun</a>
       <ul class="dropdown-menu">
         <li><a href="/sepakung/pengunjung/dusun/krajan.php">Krajan</a></li>
         <li><a href="/sepakung/pengunjung/dusun/pagergedog.php">Pagergedog</a></li>
@@ -271,7 +271,7 @@
       </ul>
     </li>
     <li class="dropdown">
-      <a href="#">PPID</a>
+      <a href="/sepakung/pengunjung/home.php">PPID</a>
       <ul class="dropdown-menu">
         <li><a href="/sepakung/pengunjung/PPID/profilePPID.php">Profil PPID</a></li>
         <li><a href="/sepakung/pengunjung/PPID/strukturPPID.php">Struktur Organisasi PPID</a></li>
@@ -281,10 +281,10 @@
         <li><a href="/sepakung/pengunjung/PPID/formPPID.php">Form Pengajuan Informasi</a></li>
       </ul>
     </li>
-    <li><a href="#">Aplikasi Pamdes V2</a></li>
-    <li><a href="#">Wisata Sepakung</a></li>
+    <li><a href="/sepakung/pengunjung/aplikasi.php">Aplikasi Pamdes V2</a></li>
+    <li><a href="/sepakung/pengunjung/wisata.php">Wisata Sepakung</a></li>
     <li class="dropdown">
-      <a href="#">Media Sosial</a>
+      <a href="/sepakung/pengunjung/sosmed.php">Media Sosial</a>
       <ul class="dropdown-menu">
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Instagram</a></li>
@@ -292,7 +292,7 @@
         <li><a href="#">Facebook</a></li>
       </ul>
     </li>
-    <li><a href="#">Hubungi Kami</a></li>
+    <li><a href="/sepakung/pengunjung/contact.php">Hubungi Kami</a></li>
   </ul>
 </nav>
 

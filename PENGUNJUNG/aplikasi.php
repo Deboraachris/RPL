@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dusun Krajan | Pemerintah Desa Sepakung</title>
+  <title>Aplikasi PAMDES V2 | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -296,21 +296,47 @@
   </ul>
 </nav>
 
-    <h2>GEOGRAFI DUSUN JINGKOL</h2>
+    <div class="container">
+  <h2 style="text-align:center; color:#222;">Panduan Penggunaan Aplikasi dan Fitur Layanan Desa Sepakung</h2>
+  <ol style="font-size:16px; color:#333; line-height:1.8;">
+    <li>
+      <strong>Download Aplikasi</strong> di <em>Playstore</em> atau gunakan versi web: 
+      <a href="http://www.sepakung.web.id" target="_blank">www.sepakung.web.id</a>
+    </li>
+    <li>
+      <strong>Login:</strong> Gunakan <em>NIK</em> (Nomor Induk Kependudukan) sesuai KTP. 
+      Password dapat diminta melalui <a href="https://wa.me/6281234567890" target="_blank">Whatsapp Admin</a>.
+      <ul>
+        <li><strong>a. Cek Anggota Keluarga:</strong> Untuk melihat data anggota keluarga. Jika tidak lengkap, hubungi perangkat desa.</li>
+        <li><strong>b. Cek Status Surat:</strong> Untuk memantau proses permohonan surat yang diajukan.</li>
+        <li><strong>c. Buat Surat Pengantar Umum:</strong> Ajukan permohonan seperti KTP, KK, Akta Kelahiran, Biodata, dll.</li>
+        <li><strong>d. Buat Surat Keterangan Umum:</strong> Permohonan seperti Surat Kehilangan, Domisili, SKCK, dll.</li>
+        <li><strong>e. Buat Surat Keterangan Usaha:</strong> Ajukan surat untuk keperluan usaha.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Petunjuk Pengisian Surat:</strong>
+      <ul>
+        <li><u># Surat Pengantar Umum:</u> Isi <em>Keperluan Surat</em> dan <em>Keterangan Lain</em> → klik tombol <strong>KIRIM PENGAJUAN</strong>.</li>
+        <li><u># Surat Keterangan Umum:</u> Isi <em>Keperluan Surat</em> dan <em>Keterangan Lain</em> → klik <strong>KIRIM PENGAJUAN</strong>.</li>
+        <li><u># Surat Keterangan Usaha:</u> Isi <em>Data RW</em>, <em>Jenis Usaha</em>, dan <em>Keperluan</em> → klik <strong>KIRIM PENGAJUAN</strong>.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Status Surat:</strong> Klik menu <em>Status Pengajuan Surat</em> untuk melihat progres surat yang diajukan.
+    </li>
+    <li>
+      <strong>Fitur Chat Admin:</strong> Untuk berdiskusi langsung dengan admin terkait pengajuan surat.
+    </li>
+    <li>
+      <strong>Pertanyaan lebih lanjut:</strong> Gunakan halaman <em>Kontak</em> untuk bertanya jika ada informasi yang belum jelas.
+    </li>
+  </ol>
 
-  <div style="text-align:center; margin: 40px 0;">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.571037560532!2d110.41673467415563!3d-7.938085579083659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b429d3e9aeb%3A0x1ec70ee7df2bc90a!2sKantor%20Kepala%20Desa%20Sepakung!5e0!3m2!1sid!2sid!4v1719140067952!5m2!1sid!2sid" 
-    width="100%" 
-    height="450" 
-    style="border:4px solid #ccc; border-radius:10px;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  <p style="margin-top:20px; font-size:14px; color:#777;">
+    Kata kunci: desa digital, desa sepakung, ayodolan sepakung, desa kreatif, desa wisata sepakung, gumuk reco, sepakung
+  </p>
 </div>
-
-
 
   <footer class="footer-info">
   <div class="footer-container">
