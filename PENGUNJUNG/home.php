@@ -468,13 +468,14 @@
     <li class="dropdown">
       <a href="/sepakung/pengunjung/sosmed.php">Media Sosial</a>
       <ul class="dropdown-menu">
+        <li><a href="#">Whatsapp</a></li>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Youtube</a></li>
         <li><a href="#">Facebook</a></li>
       </ul>
     </li>
-    <li><a href="/sepakung/pengunjung/contact.php">Hubungi Kami</a></li>
+    <li><a href="/sepakung/pengunjung/contact.php">Berikan Masukan</a></li>
   </ul>
 </nav>
 
