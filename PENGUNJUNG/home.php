@@ -610,5 +610,3 @@ function showContent(category) {
 
 </body>
 </html>
-
-tolong ini dihubungkan dengan header dan yang berguna bisa dihapus aja
