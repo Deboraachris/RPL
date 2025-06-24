@@ -256,18 +256,18 @@
     <li class="dropdown">
       <a href="#">Dusun</a>
       <ul class="dropdown-menu">
-        <li><a href="#">Krajan</a></li>
-        <li><a href="#">Pagergedog</a></li>
-        <li><a href="#">Watulawang</a></li>
-        <li><a href="#">Gojati</a></li>
-        <li><a href="#">Bungkah</a></li>
-        <li><a href="#">Sepakung Wetan</a></li>
-        <li><a href="#">Batur</a></li>
-        <li><a href="#">Gowono</a></li>
-        <li><a href="#">Nglimut</a></li>
-        <li><a href="#">Kenongo</a></li>
-        <li><a href="#">Jingkol</a></li>
-        <li><a href="#">Srandil</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/krajan.php">Krajan</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/pagergedog.php">Pagergedog</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/watulawang.php">Watulawang</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/gojati.php">Gojati</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/bungkah.php">Bungkah</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/sepakungWetan.php">Sepakung Wetan</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/batur.php">Batur</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/gowono.php">Gowono</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/nglimut.php">Nglimut</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/kenongo.php">Kenongo</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/jingkol.php">Jingkol</a></li>
+        <li><a href="/sepakung/pengunjung/dusun/srandil.php">Srandil</a></li>
       </ul>
     </li>
     <li class="dropdown">

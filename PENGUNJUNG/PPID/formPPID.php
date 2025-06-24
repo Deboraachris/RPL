@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Struktur Organisasi | Pemerintah Desa Sepakung</title>
+  <title>Form Pengajuan PPID | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,24 +58,27 @@
     }
 
     .navbar a {
-      text-decoration: none;
-      padding: 12px 16px;
-      color: #111;
-      font-weight: bold;
-      border-bottom: 4px solid transparent;
-      transition: 0.3s;
-    }
+  text-decoration: none;
+  padding: 12px 16px; /* <--- bisa kamu ubah jadi: */
+  padding: 8px 16px; /* kurangi padding vertikal agar garis dekat teks */
+  color: #111;
+  font-weight: bold;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+  display: inline-block;
+}
 
-    .navbar a:hover {
-      border-bottom: 4px solid #f44336;
-    }
+.navbar a:hover {
+  border-bottom: 4px solid #f44336;
+}
+
 
     .nav-links {
   list-style: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav-links li {
@@ -270,12 +273,12 @@
     <li class="dropdown">
       <a href="#">PPID</a>
       <ul class="dropdown-menu">
-        <li><a href="#">Profil PPID</a></li>
-        <li><a href="#">Struktur Organisasi PPID</a></li>
-        <li><a href="#">Maklumat Pelayanan PPID</a></li>
-        <li><a href="#">Standar Pelayanan Informasi</a></li>
-        <li><a href="#">Tugas PPID</a></li>
-        <li><a href="#">Form Pengajuan Informasi</a></li>
+        <li><a href="/sepakung/pengunjung/PPID/profilePPID.php">Profil PPID</a></li>
+        <li><a href="/sepakung/pengunjung/PPID/strukturPPID.php">Struktur Organisasi PPID</a></li>
+        <li><a href="/sepakung/pengunjung/PPID/maklumat.php">Maklumat Pelayanan PPID</a></li>
+        <li><a href="/sepakung/pengunjung/PPID/standar.php">Standar Pelayanan Informasi</a></li>
+        <li><a href="/sepakung/pengunjung/PPID/tugasPPID.php">Tugas PPID</a></li>
+        <li><a href="/sepakung/pengunjung/PPID/formPPID.php">Form Pengajuan Informasi</a></li>
       </ul>
     </li>
     <li><a href="#">Aplikasi Pamdes V2</a></li>
@@ -293,19 +296,21 @@
   </ul>
 </nav>
 
+    <h2>FORM PENGAJUAN PPID DESA SEPAKUNG</h2>
 
-  <div class="container">
-    <h2>STRUKTUR ORGANISASI</h2>
+<div class="container" style="text-align:center; margin: 40px 0;">
+  <img 
+    src="https://sepakung.id/wp-content/uploads/2023/06/struktur-ppid-desa.jpg" 
+    alt="Struktur Organisasi PPID Desa Sepakung" 
+    class="struktur-img"
+  >
+  <p style="margin-top:20px; font-size:16px; color:#444;">
+    Struktur organisasi PPID Desa Sepakung dibentuk untuk menjamin keterbukaan informasi publik sesuai dengan amanat Undang-Undang Nomor 14 Tahun 2008. PPID Desa bertugas memberikan layanan informasi kepada masyarakat secara cepat, tepat, dan sederhana.
+  </p>
+</div>
 
-    <div class="share-buttons">
-      <button>🔗 Share</button>
-      <button>📌 Pin it</button>
-      <button>🐦 Tweet</button>
-      <button>📤 Send</button>
-    </div>
 
-    <img class="struktur-img" src="https://sepakung.id/wp-content/uploads/2023/06/struktor-desaaaaaa.jpg" alt="Struktur Organisasi Desa Sepakung">
-  </div>
+
 
   <footer class="footer-info">
   <div class="footer-container">
