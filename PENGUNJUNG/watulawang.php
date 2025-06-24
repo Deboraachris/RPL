@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Struktur Organisasi</title>
+    <title>Watulawang</title>
     <style>
         /* Reset CSS */
         * {
@@ -174,6 +174,16 @@ ini_set('display_errors', 1);
             font-size: 14px;
             color: #aaa;
         }
+
+        .image-stack img {
+            display: block;
+            margin: 0 auto 25px auto; /* Tengah + spasi antar gambar */
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -181,7 +191,7 @@ ini_set('display_errors', 1);
 
     <!-- Header -->
     <header class="header">
-        <div class="logo">Struktur Organisasi</div>
+        <div class="logo">Pemerintah Desa Sepakung</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
@@ -243,10 +253,11 @@ ini_set('display_errors', 1);
 
     <!-- Isi Halaman -->
     <section class="section">
-        <h2>STRUKTUR ORGANISASI</h2>
-        <div style="text-align: center; margin-top: 20px;">
-            <img src="../FOTO/g21.png" alt="Profil Pemerintah Desa Sepakung" style="max-width: 100%; height: auto;">
+        <h2>WATULAWANG</h2>
+        <div class="image-stack">
+            <img src="../FOTO/g41.jpg" alt="penduduk" style="max-width: 40%; height: auto;">
         </div>
+        <p style="text-align:center">Peta Wilayah Desa Watulawang</p>
     </section>
 
 <!-- Footer -->

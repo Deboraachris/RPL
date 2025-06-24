@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Struktur Organisasi</title>
+    <title>Perekonomian</title>
     <style>
         /* Reset CSS */
         * {
@@ -204,24 +204,24 @@ ini_set('display_errors', 1);
                         <li><a href="penduduk.php">Penduduk</a></li>
                         <li><a href="perekonomian.php">Perekonomian</a></li>
                         <li><a href="potensi_desa.php">Potensi Desa</a></li>
-                        <li><a href="#">Sarpras</a></li>
+                        <li><a href="sarpras.php">Sarpras</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#">Dusun</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Krajan</a></li>
-                        <li><a href="#">Pagergedog</a></li>
-                        <li><a href="#">Watulawang</a></li>
-                        <li><a href="#">Gojati</a></li>
-                        <li><a href="#">Bungkah</a></li>
-                        <li><a href="#">Sepakung Wetan</a></li>
-                        <li><a href="#">Batur</a></li>
-                        <li><a href="#">Gowono</a></li>
-                        <li><a href="#">Nglimut</a></li>
-                        <li><a href="#">Kenongo</a></li>
-                        <li><a href="#">Jingkol</a></li>
-                        <li><a href="#">Srandil</a></li>
+                        <li><a href="krajan.php">Krajan</a></li>
+                        <li><a href="pagergedog.php">Pagergedog</a></li>
+                        <li><a href="watulawang.php">Watulawang</a></li>
+                        <li><a href="gojati.php">Gojati</a></li>
+                        <li><a href="bungkah.php">Bungkah</a></li>
+                        <li><a href="sepakung_wetan.php">Sepakung Wetan</a></li>
+                        <li><a href="batur.php">Batur</a></li>
+                        <li><a href="gowono.php">Gowono</a></li>
+                        <li><a href="nglimut.php">Nglimut</a></li>
+                        <li><a href="kenongo.php">Kenongo</a></li>
+                        <li><a href="jingkol.php">Jingkol</a></li>
+                        <li><a href="srandil.php">Srandil</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
