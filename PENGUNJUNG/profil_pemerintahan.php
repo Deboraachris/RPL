@@ -173,9 +173,9 @@ ini_set('display_errors', 1);
                     <li><a href="struktur_organisasi.php">Struktur Organisasi</a></li>
                     <li><a href="geografi.php">Geografi</a></li>
                     <li><a href="kesehatan.php">Kesehatan</a></li>
-                    <li><a href="#">Penduduk</a></li>
-                    <li><a href="#">Perekonomian</a></li>
-                    <li><a href="#">Potensi Desa</a></li>
+                    <li><a href="penduduk.php">Penduduk</a></li>
+                    <li><a href="perekonomian.php">Perekonomian</a></li>
+                    <li><a href="potensi_desa.php">Potensi Desa</a></li>
                     <li><a href="#">Sarpras</a></li>
                 </ul>
             </li>

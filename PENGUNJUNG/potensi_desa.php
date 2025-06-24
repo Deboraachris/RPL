@@ -6,12 +6,13 @@ ini_set('display_errors', 1);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Profil Pemerintah Desa Sepakung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Organisasi</title>
     <style>
-        /* Tambahkan CSS yang sama seperti di home.php kamu */
+        /* Reset CSS */
         * {
             margin: 0;
             padding: 0;
@@ -93,26 +94,26 @@ ini_set('display_errors', 1);
             padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
-            text-align: center;
         }
 
         .section h2 {
             font-size: 32px;
             margin-bottom: 20px;
             color: #222;
+            text-align: center;
         }
 
-        .section p {
-            font-size: 20px;
-            margin-bottom: 30px;
+        .section h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section p,
+        .section li {
+            font-size: 18px;
+            margin-bottom: 10px;
             color: #555;
-        }
-
-        .section img {
-            max-width: 500px;
-            width: 90%;
-            height: auto;
-            border-radius: 10px;
         }
 
         .footer {
@@ -195,7 +196,7 @@ ini_set('display_errors', 1);
             <ul class="nav-links">
                 <li><a href="/sepakung/pengunjung/home.php">Home</a></li>
                 <li class="dropdown">
-                    <a href="#">Profil</a>
+                    <a href="profil_pemerintahan.php">Profil</a>
                     <ul class="dropdown-menu">
                         <li><a href="struktur_organisasi.php">Struktur Organisasi</a></li>
                         <li><a href="geografi.php">Geografi</a></li>
@@ -251,16 +252,27 @@ ini_set('display_errors', 1);
     </header>
 
     <!-- Isi Halaman -->
-<section class="section">
-    <h2>Kondisi Kesehatan Masyarakat Desa Sepakung</h2>
-    <div class="image-stack">
-        <img src="../FOTO/g24.png" alt="Kesehatan Masyarakat Desa Sepakung">
-        <img src="../FOTO/g25.png" alt="Kesehatan Masyarakat Desa Sepakung">
-        <img src="../FOTO/g26.png" alt="Kesehatan Masyarakat Desa Sepakung">
-        <img src="../FOTO/g27.png" alt="Kesehatan Masyarakat Desa Sepakung">
-    </div>
-</section>
-
+    <section class="section">
+        <h2>PEREKONOMIAN</h2>
+        <p>1.Potensi Bidang Pertanian dan Perkebunan</p>
+        <p>a. Tanaman Pangan</p>
+        <p>Padi, Ubi Kayu, Ubi Jalar (MANGUL), Jagung</p>
+        <p>b. Tanaman Buah-buahan</p>
+        <p>Alpukat, Pisang, Kelengkeng, Nangka</p>
+        <p>c. Tanaman Perkebunan</p>
+        <p>Kelapa, Cengkeh, Aren, Kopi</p>
+        <p>d. Tanaman Sayuran</p>
+        <p>Kolbis, Tomat, Cabai, Brokoli, Sawi, Onclang</p>
+        <br><br>
+        <p>2.Potensi Bidang Peternakan</p>
+        <p>Peternakan Sapi dan Kambing</p>
+        <img src="../FOTO/g34.jpg" alt="penduduk" style="max-width: 60%; height: auto;"> <br>
+        <p>3.Home Industri</p>
+        <p>Kripik, Tape, Gula Semut, Gula Aren, Madu Lebah</p>
+        <img src="../FOTO/g35.jpg" alt="penduduk" style="max-width: 60%; height: auto;">
+        <img src="../FOTO/g36.jpg" alt="penduduk" style="max-width: 60%; height: auto;">
+        
+    </section>
 
 <!-- Footer -->
 <footer class="footer">
@@ -281,4 +293,5 @@ ini_set('display_errors', 1);
 </footer>
 
 </body>
+
 </html>
