@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dusun Krajan | Pemerintah Desa Sepakung</title>
+  <title>Desa Watulawang | Pemerintah Desa Sepakung</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -130,6 +130,20 @@
       color: #222;
     }
 
+    .container h3 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .container h4 {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
     .share-buttons {
       text-align: center;
       margin-bottom: 15px;
@@ -142,13 +156,6 @@
       margin: 5px;
       border-radius: 4px;
       cursor: pointer;
-    }
-
-    .struktur-img {
-      width: 100%;
-      max-width: 100%;
-      border: 6px solid gold;
-      border-radius: 8px;
     }
 
     @media screen and (max-width: 600px) {
@@ -220,6 +227,22 @@
 .footer-right {
     flex: 1;
     min-width: 300px;
+}
+
+.gambar1-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.watulawang-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
 }
 
   </style>
@@ -296,21 +319,19 @@
   </ul>
 </nav>
 
-    <h2>GEOGRAFI DUSUN WATULAWANG</h2>
+<div class="container">
+    <h2>DESA WATULAWANG SEPAKUNG</h2>
 
-  <div style="text-align:center; margin: 40px 0;">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.571037560532!2d110.41673467415563!3d-7.938085579083659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b429d3e9aeb%3A0x1ec70ee7df2bc90a!2sKantor%20Kepala%20Desa%20Sepakung!5e0!3m2!1sid!2sid!4v1719140067952!5m2!1sid!2sid" 
-    width="100%" 
-    height="450" 
-    style="border:4px solid #ccc; border-radius:10px;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+    <div class="share-buttons">
+      <button>🔗 Share</button>
+      <button>📌 Pin it</button>
+      <button>🐦 Tweet</button>
+      <button>📤 Send</button>
+    </div>
 
+    <img class="watulawang-img" src="/sepakung/foto/g41.jpg" alt="Watulawang Desa Sepakung">
 
+  </div>
 
   <footer class="footer-info">
   <div class="footer-container">
