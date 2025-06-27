@@ -6,7 +6,7 @@
   <title>Perekonomian | Pemerintah Desa Sepakung</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -222,6 +222,52 @@
     min-width: 300px;
 }
 
+.share-buttons {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .share-buttons button {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 8px 14px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+.gambar1-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.gambar2-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.gambar3-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.gambar4-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
   </style>
 </head>
 <body>
@@ -296,37 +342,21 @@
   </ul>
 </nav>
 
+    <div class="container">
+    <h2>Kondisi Perekonomian Masyarakat Desa Sepakung</h2>
 
-  <h2>DATA PEKERJAAN & PEREKONOMIAN DESA SEPAKUNG</h2>
+    <div class="share-buttons">
+      <button>🔗 Share</button>
+      <button>📌 Pin it</button>
+      <button>🐦 Tweet</button>
+      <button>📤 Send</button>
+    </div>
 
-<p>
-  Berikut adalah gambaran kondisi perekonomian masyarakat Desa Sepakung berdasarkan data tahun 2024:
-</p>
-
-<ul>
-  <li>💼 <strong>Total Angkatan Kerja:</strong> 2.145 jiwa</li>
-  <li>🌾 <strong>Sektor Pertanian & Perkebunan:</strong> 1.020 jiwa (47%)</li>
-  <li>🧱 <strong>Sektor Konstruksi & Buruh Harian:</strong> 430 jiwa (20%)</li>
-  <li>🛍️ <strong>Perdagangan, UMKM & Jasa:</strong> 390 jiwa (18%)</li>
-  <li>🎒 <strong>Guru, Tenaga Pendidikan & ASN:</strong> 105 jiwa (5%)</li>
-  <li>🚚 <strong>Transportasi & Ekspedisi:</strong> 75 jiwa (3%)</li>
-  <li>🏡 <strong>Ibu Rumah Tangga & Tidak Bekerja:</strong> 125 jiwa (7%)</li>
-</ul>
-
-<p>
-  Grafik berikut menunjukkan distribusi pekerjaan warga Desa Sepakung:
-</p>
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-pekerjaan-sepakung.png"
-     alt="Diagram Sektor Pekerjaan Masyarakat"
-     style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-perekonomian-sepakung.png"
-     alt="Grafik Ekonomi Berdasarkan Jenis Usaha"
-     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
-
-
+    <img class="gambar1-img" src="/sepakung/foto/g30.png" alt="Gambar1 Desa Sepakung">
+    <img class="gambar2-img" src="/sepakung/foto/g31.png" alt="Gambar2 Desa Sepakung">
+    <img class="gambar3-img" src="/sepakung/foto/g32.png" alt="Gambar3 Desa Sepakung">
+    <img class="gambar4-img" src="/sepakung/foto/g33.png" alt="Gambar4 Desa Sepakung">
+  </div>
 
   <footer class="footer-info">
   <div class="footer-container">

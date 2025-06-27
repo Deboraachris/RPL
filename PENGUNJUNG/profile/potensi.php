@@ -112,45 +112,6 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-
-
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    .container h2 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #222;
-    }
-
-    .share-buttons {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .share-buttons button {
-      background-color: #eee;
-      border: 1px solid #ccc;
-      padding: 8px 14px;
-      margin: 5px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .struktur-img {
-      width: 100%;
-      max-width: 100%;
-      border: 6px solid gold;
-      border-radius: 8px;
-    }
-
     @media screen and (max-width: 600px) {
       .header-main {
         flex-direction: column;
@@ -220,6 +181,78 @@
 .footer-right {
     flex: 1;
     min-width: 300px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  padding: 0;
+  margin: 0;
+  width: 300%; /* karena ada 3 slide */
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 8px;
+}
+
+.carousel-slide h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #0c0c1d;
+}
+
+.carousel-slide p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 2px solid navy;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carousel-button.prev {
+  left: -60px;
+}
+
+.carousel-button.next {
+  right: 40px;
+}
+
+.carousel-slide img {
+  width: 30%;
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
   </style>
@@ -297,36 +330,31 @@
 </nav>
 
 
-  <h2>POTENSI DESA SEPAKUNG</h2>
+  <div class="carousel-container">
+  <button class="carousel-button prev">←</button>
 
-<p>
-  Desa Sepakung memiliki berbagai potensi unggulan yang dapat dikembangkan sebagai sumber daya ekonomi, wisata, dan ketahanan pangan desa. Berikut beberapa sektor utama yang menjadi kekuatan Desa Sepakung:
-</p>
+  <div class="carousel-track-container">
+    <ul class="carousel-track">
+      <li class="carousel-slide">
+        <img src="/sepakung/foto/g34.jpg" alt="Perusahaan">
+        <h3>Potensi Bidang Peternakan</h3>
+        <p>Peternakan Sapi dan Kambing</p>
+      </li>
+      <li class="carousel-slide">
+        <img src="/sepakung/foto/g35.jpg" alt="Instansi">
+        <h3>Home Industri</h3>
+        <p>Kripik, Tape, Gula Semut, Gula Aren, Madu Lebah</p>
+      </li>
+      <li class="carousel-slide">
+        <img src="/sepakung/foto/g36.jpg" alt="Sekolah">
+        <h3>Home Industri</h3>
+        <p>Kripik, Tape, Gula Semut, Gula Aren, Madu Lebah</p>
+      </li>
+    </ul>
+  </div>
 
-<ul>
-  <li>🌿 <strong>Perkebunan:</strong> Kopi, cengkeh, dan alpukat menjadi komoditas utama yang dibudidayakan di lahan perbukitan Desa Sepakung.</li>
-  <li>🌾 <strong>Pertanian:</strong> Padi, jagung, dan hortikultura (cabai, tomat, sayur-sayuran) menjadi tulang punggung sektor pangan masyarakat.</li>
-  <li>💧 <strong>Sumber Mata Air & Irigasi:</strong> Beberapa sumber mata air alami digunakan untuk kebutuhan irigasi dan air bersih.</li>
-  <li>🌄 <strong>Wisata Alam:</strong> Objek wisata seperti Gardu Pandang, Curug Semirang, dan panorama Gunung Telomoyo menjadi daya tarik wisatawan.</li>
-  <li>🐮 <strong>Peternakan:</strong> Ternak sapi, kambing, dan ayam kampung berkembang dalam skala rumah tangga maupun kelompok tani.</li>
-  <li>🧑‍🎨 <strong>Kriya & Produk Lokal:</strong> Anyaman bambu, kerajinan tangan, serta produk olahan seperti kopi bubuk dan gula semut.</li>
-</ul>
-
-<p>
-  Berikut ini merupakan dokumentasi visual potensi unggulan Desa Sepakung:
-</p>
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/perkebunan-sepakung.jpg"
-     alt="Perkebunan Kopi dan Cengkeh"
-     style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/wisata-sepakung.jpg"
-     alt="Wisata Alam Desa Sepakung"
-     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
-
-
-
+  <button class="carousel-button next">→</button>
+</div>
 
   <footer class="footer-info">
   <div class="footer-container">
@@ -357,6 +385,44 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+let currentIndex = 0;
+
+// Set dynamic width for track
+track.style.width = `${slides.length * 100}%`;
+slides.forEach(slide => {
+  slide.style.width = `${100 / slides.length}%`;
+});
+
+// Navigasi tombol
+document.querySelector('.next').addEventListener('click', () => {
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+    track.style.transform = `translateX(-${100 * currentIndex}%)`;
+  }
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    track.style.transform = `translateX(-${100 * currentIndex}%)`;
+  }
+});
+
+setInterval(() => {
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  track.style.transform = `translateX(-${100 * currentIndex}%)`;
+}, 8000); // Ganti slide tiap 5 detik
+
+
+</script>
 
 
 </body>
