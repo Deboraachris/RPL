@@ -75,7 +75,7 @@
   margin: 0;
   padding: 10px;
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .nav-links li {

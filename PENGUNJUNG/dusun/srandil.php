@@ -330,7 +330,7 @@
   <div class="footer-container">
     <div class="footer-left">
       <h2>INFO<br>KANTOR DESA SEPAKUNG</h2>
-      <p>Whatsapp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+      <p>Whatsapp: <a href="https://wa.me/6285745357090" target="_blank">+62 812-3456-7890</a></p>
       <p>Email: <a href="mailto:sepakung.id@gmail.com">sepakung.id@gmail.com</a></p>
       <p>Waktu Operasional:</p>
       <ul class="operational-time">

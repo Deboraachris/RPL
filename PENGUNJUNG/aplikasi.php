@@ -6,7 +6,7 @@
   <title>Aplikasi PAMDES V2 | Pemerintah Desa Sepakung</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -222,6 +222,39 @@
     min-width: 300px;
 }
 
+.gambar1-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gambar2-img {
+  display: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  max-width:20%;
+}
+
+.gambar3-img {
+  display: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  max-width:20%;
+}
+
+.gambar4-img {
+  display: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  max-width:20%;
+}
+
+
   </style>
 </head>
 <body>
@@ -297,15 +330,21 @@
 </nav>
 
     <div class="container">
+    <img class="gambar1-img" src="/sepakung/foto/g48.png" alt="aplikasi pamdes">
   <h2 style="text-align:center; color:#222;">Panduan Penggunaan Aplikasi dan Fitur Layanan Desa Sepakung</h2>
   <ol style="font-size:16px; color:#333; line-height:1.8;">
     <li>
       <strong>Download Aplikasi</strong> di <em>Playstore</em> atau gunakan versi web: 
       <a href="http://www.sepakung.web.id" target="_blank">www.sepakung.web.id</a>
     </li>
+
+    <img class="gambar2-img" src="/sepakung/foto/g49.jpeg" alt="aplikasi pamdes">
+
     <li>
       <strong>Login:</strong> Gunakan <em>NIK</em> (Nomor Induk Kependudukan) sesuai KTP. 
       Password dapat diminta melalui <a href="https://wa.me/6281234567890" target="_blank">Whatsapp Admin</a>.
+      <img class="gambar3-img" src="/sepakung/foto/g50.jpeg" alt="aplikasi pamdes">
+
       <ul>
         <li><strong>a. Cek Anggota Keluarga:</strong> Untuk melihat data anggota keluarga. Jika tidak lengkap, hubungi perangkat desa.</li>
         <li><strong>b. Cek Status Surat:</strong> Untuk memantau proses permohonan surat yang diajukan.</li>
@@ -316,14 +355,19 @@
     </li>
     <li>
       <strong>Petunjuk Pengisian Surat:</strong>
+
       <ul>
+        <img class="gambar4-img" src="/sepakung/foto/g51.jpg" alt="aplikasi pamdes">
         <li><u># Surat Pengantar Umum:</u> Isi <em>Keperluan Surat</em> dan <em>Keterangan Lain</em> → klik tombol <strong>KIRIM PENGAJUAN</strong>.</li>
+        <img class="gambar4-img" src="/sepakung/foto/g53.jpeg" alt="aplikasi pamdes">
         <li><u># Surat Keterangan Umum:</u> Isi <em>Keperluan Surat</em> dan <em>Keterangan Lain</em> → klik <strong>KIRIM PENGAJUAN</strong>.</li>
+        <img class="gambar4-img" src="/sepakung/foto/g54.jpeg" alt="aplikasi pamdes">
         <li><u># Surat Keterangan Usaha:</u> Isi <em>Data RW</em>, <em>Jenis Usaha</em>, dan <em>Keperluan</em> → klik <strong>KIRIM PENGAJUAN</strong>.</li>
       </ul>
     </li>
     <li>
       <strong>Status Surat:</strong> Klik menu <em>Status Pengajuan Surat</em> untuk melihat progres surat yang diajukan.
+         <img class="gambar4-img" src="/sepakung/foto/g55.jpeg" alt="aplikasi pamdes">
     </li>
     <li>
       <strong>Fitur Chat Admin:</strong> Untuk berdiskusi langsung dengan admin terkait pengajuan surat.
