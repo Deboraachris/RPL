@@ -448,7 +448,7 @@ $conn->close();
 </div>
 
 <div class="header-main">
-  <img src="/sepakung/foto/g21.png" alt="Logo Semarang">
+  <img src="/sepakung/foto/g42.png" alt="Logo Semarang">
   <div class="site-info">
     <h1>Pemerintah Desa Sepakung</h1>
     <p>Jalan Kiai Semendi No 4A Sepakung Banyubiru 50664 Kab. Semarang</p>
