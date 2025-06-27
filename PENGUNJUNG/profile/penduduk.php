@@ -130,6 +130,20 @@
       color: #222;
     }
 
+    .container h3 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .container h4 {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
     .share-buttons {
       text-align: center;
       margin-bottom: 15px;
@@ -142,13 +156,6 @@
       margin: 5px;
       border-radius: 4px;
       cursor: pointer;
-    }
-
-    .struktur-img {
-      width: 100%;
-      max-width: 100%;
-      border: 6px solid gold;
-      border-radius: 8px;
     }
 
     @media screen and (max-width: 600px) {
@@ -220,6 +227,22 @@
 .footer-right {
     flex: 1;
     min-width: 300px;
+}
+
+.jenisKelamin-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.jumlahKK-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
 }
 
   </style>
@@ -296,34 +319,25 @@
   </ul>
 </nav>
 
+<div class="container">
+    <h2>DATA PENDUDUK DESA SEPAKUNG</h2>
 
-  <h2>DATA PENDUDUK DESA SEPAKUNG</h2>
+    <div class="share-buttons">
+      <button>🔗 Share</button>
+      <button>📌 Pin it</button>
+      <button>🐦 Tweet</button>
+      <button>📤 Send</button>
+    </div>
 
-<p>
-  Berikut adalah data statistik penduduk Desa Sepakung berdasarkan hasil pendataan tahun 2024:
-</p>
+    <h3>JUMLAH PENDUDUK SEPAKUNG</h3>
+    <h4>MENURUT JENIS KELAMIN</h4>
 
-<ul>
-  <li>👨‍👩‍👧‍👦 <strong>Total Penduduk:</strong> 3.874 jiwa</li>
-  <li>🧍‍♂️ <strong>Laki-laki:</strong> 1.962 jiwa</li>
-  <li>🧍‍♀️ <strong>Perempuan:</strong> 1.912 jiwa</li>
-  <li>🏘️ <strong>Jumlah Kepala Keluarga (KK):</strong> 1.120 KK</li>
-</ul>
+    <img class="jenisKelamin-img" src="/sepakung/foto/g28.jpg" alt="Menurut Jenis Kelamin Desa Sepakung">
 
-<p>
-  Distribusi penduduk berdasarkan jenis kelamin dan jumlah KK ditunjukkan dalam grafik berikut:
-</p>
+    <h4>MENURUT JUMLAH KEPALA KELUARGA</h4>
+    <img class="jumlahKK-img" src="/sepakung/foto/g29.jpg" alt="Menurut KK Desa Sepakung">
 
-<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-gender-penduduk.png"
-     alt="Diagram Jenis Kelamin Penduduk"
-     style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-kk-sepakung.png"
-     alt="Grafik Jumlah Kepala Keluarga"
-     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
-
-
+  </div>
 
   <footer class="footer-info">
   <div class="footer-container">

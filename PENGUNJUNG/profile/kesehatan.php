@@ -6,7 +6,7 @@
   <title>Kesehatan | Pemerintah Desa Sepakung</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -222,6 +222,52 @@
     min-width: 300px;
 }
 
+.share-buttons {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .share-buttons button {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 8px 14px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+.gambar1-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.gambar2-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.gambar3-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
+.gambar4-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 80%;
+}
+
   </style>
 </head>
 <body>
@@ -296,44 +342,21 @@
   </ul>
 </nav>
 
+    <div class="container">
+    <h2>KESEHATAN MASYARAKAT DESA SEPAKUNG</h2>
 
-  <h2>KONDISI KESEHATAN MASYARAKAT DESA SEPAKUNG</h2>
+    <div class="share-buttons">
+      <button>🔗 Share</button>
+      <button>📌 Pin it</button>
+      <button>🐦 Tweet</button>
+      <button>📤 Send</button>
+    </div>
 
-<p>
-  Berdasarkan data Puskesmas dan Posyandu setempat, berikut adalah ringkasan kondisi kesehatan masyarakat di Desa Sepakung tahun 2024:
-</p>
-
-<ul>
-  <li>👶 <strong>Jumlah Balita Sehat:</strong> 112 anak</li>
-  <li>📉 <strong>Kasus Stunting:</strong> 17 anak (menurun 12% dibanding tahun lalu)</li>
-  <li>🧓 <strong>Lansia yang aktif mengikuti Posyandu:</strong> 85 orang</li>
-  <li>💉 <strong>Warga yang telah menerima vaksin lengkap:</strong> 1.230 jiwa</li>
-  <li>❤️ <strong>Penderita Penyakit Kronis (Hipertensi, Diabetes, Jantung):</strong> 76 orang</li>
-  <li>🩺 <strong>Kegiatan pemeriksaan rutin (check-up, timbang, imunisasi):</strong> dilakukan tiap bulan di 6 titik Posyandu</li>
-</ul>
-
-<p>
-  Pemerintah Desa terus berupaya meningkatkan derajat kesehatan masyarakat dengan program:
-</p>
-
-<ul>
-  <li>📆 Jadwal Posyandu rutin setiap minggu ke-2 tiap bulan</li>
-  <li>🚑 Layanan jemput antar untuk lansia dan disabilitas</li>
-  <li>📚 Edukasi kesehatan ibu & anak oleh kader kesehatan</li>
-  <li>🌱 Program Gizi Tambahan dan PMT Balita</li>
-</ul>
-
-<br>
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/chart-kesehatan-sepakung.png"
-     alt="Diagram Kondisi Kesehatan Warga"
-     style="width:100%; max-width:700px; display:block; margin:auto; border-radius:8px; border:4px solid #ccc;">
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/bar-chart-kesehatan.png"
-     alt="Grafik Status Kesehatan per Kelompok Umur"
-     style="width:100%; max-width:700px; display:block; margin:30px auto 20px auto; border-radius:8px; border:4px solid #ccc;">
-
-
+    <img class="gambar1-img" src="/sepakung/foto/g24.png" alt="Gambar1 Desa Sepakung">
+    <img class="gambar2-img" src="/sepakung/foto/g25.png" alt="Gambar2 Desa Sepakung">
+    <img class="gambar3-img" src="/sepakung/foto/g26.png" alt="Gambar3 Desa Sepakung">
+    <img class="gambar4-img" src="/sepakung/foto/g27.png" alt="Gambar4 Desa Sepakung">
+  </div>
 
   <footer class="footer-info">
   <div class="footer-container">

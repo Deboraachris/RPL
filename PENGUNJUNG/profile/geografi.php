@@ -6,7 +6,7 @@
   <title>Geografi | Pemerintah Desa Sepakung</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -78,7 +78,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .nav-links li {
@@ -130,6 +130,20 @@
       color: #222;
     }
 
+    .container p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+    }
+
+    .container ul {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+    }
+
     .share-buttons {
       text-align: center;
       margin-bottom: 15px;
@@ -165,7 +179,7 @@
     background-color: #0c0c1d;
     color: white;
     padding: 50px 30px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .footer-container {
@@ -221,6 +235,46 @@
     flex: 1;
     min-width: 300px;
 }
+
+.share-buttons {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .share-buttons button {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 8px 14px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+.geografi-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 50%;
+  border: 6px solid gold;
+  border-radius: 8px;
+}
+
+.round-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 50%;
+  border: 6px solid gold;
+  border-radius: 8px;
+}
+
+.tanpa-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 
   </style>
 </head>
@@ -296,14 +350,23 @@
   </ul>
 </nav>
 
+<div class="container">
+    <h2>GEOGRAFI DESA SEPAKUNG</h2>
 
-  <h2>GEOGRAFI DESA SEPAKUNG</h2>
+    <div class="share-buttons">
+      <button>🔗 Share</button>
+      <button>📌 Pin it</button>
+      <button>🐦 Tweet</button>
+      <button>📤 Send</button>
+    </div>
 
-<p>
+    <img class="geografi-img" src="/sepakung/foto/g22.png" alt="Geografi Desa Sepakung">
+
+    <p>
   <strong>Luas wilayah Desa Sepakung</strong> seluas <strong>786,670 Ha</strong>, yang terdiri dari:
 </p>
 
-<ul>
+    <ul class="tanpa-bullet">
   <li>🌾 Sawah: 165,120 ha</li>
   <li>🏡 Pekarangan: 87,200 ha</li>
   <li>🌿 Tegal: 275,150 ha</li>
@@ -311,12 +374,10 @@
   <li>📍 Lainnya: 67,100 ha</li>
 </ul>
 
+<img class="round-img" src="/sepakung/foto/g23.png" alt="Round Desa Sepakung">
+  </div>
+
 <br>
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/peta-desa-sepakung.jpg" alt="Peta Wilayah Desa Sepakung" style="width:100%; max-width:1000px; border:4px solid #ccc; border-radius: 8px; margin-bottom:20px;">
-
-<img src="https://sepakung.id/wp-content/uploads/2023/06/pie-chart-sepakung.png" alt="Diagram Sebaran Wilayah" style="width:100%; max-width:600px; display:block; margin:auto; border-radius:8px;">
-
 
   <footer class="footer-info">
   <div class="footer-container">

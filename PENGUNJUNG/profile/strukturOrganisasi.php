@@ -6,7 +6,7 @@
   <title>Struktur Organisasi | Pemerintah Desa Sepakung</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -162,7 +162,7 @@
     background-color: #0c0c1d;
     color: white;
     padding: 50px 30px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .footer-container {
@@ -304,7 +304,7 @@
       <button>📤 Send</button>
     </div>
 
-    <img class="struktur-img" src="https://sepakung.id/wp-content/uploads/2023/06/struktor-desaaaaaa.jpg" alt="Struktur Organisasi Desa Sepakung">
+    <img class="struktur-img" src="/sepakung/foto/g43.png" alt="Struktur Organisasi Desa Sepakung">
   </div>
 
   <footer class="footer-info">
