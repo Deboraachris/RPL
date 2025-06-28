@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aplikasi PAMDES V2 | Pemerintah Desa Sepakung</title>
+  <title>Berikan Masukan | Pemerintah Desa Sepakung</title>
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -113,23 +113,90 @@
   display: block;
 }
 
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  gap: 20px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
+.contact-left {
+  flex: 1;
+  min-width: 250px;
+  background: #00bfa6;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
 
-    .container h2 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #222;
-    }
+.contact-left h3 {
+  margin-top: 0;
+}
 
+.contact-right {
+  flex: 2;
+  min-width: 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.send-button {
+  background-color: #00bfa6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #009e8c;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    
+  }
+
+  .contact-left,
+  .contact-right {
+    border-radius: 10px;
+  }
+}
     .share-buttons {
       text-align: center;
       margin-bottom: 15px;
@@ -142,13 +209,6 @@
       margin: 5px;
       border-radius: 4px;
       cursor: pointer;
-    }
-
-    .struktur-img {
-      width: 100%;
-      max-width: 100%;
-      border: 6px solid gold;
-      border-radius: 8px;
     }
 
     @media screen and (max-width: 600px) {
@@ -221,109 +281,6 @@
     flex: 1;
     min-width: 300px;
 }
-
-.contact-section {
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.contact-left {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  flex: 1;
-  min-width: 300px;
-}
-
-.contact-box {
-  background: #f9f6f6;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.contact-box i {
-  font-size: 24px;
-  color: #7a4e2c;
-  margin-bottom: 8px;
-}
-
-.contact-box h4 {
-  margin: 8px 0 4px;
-  font-size: 16px;
-  color: #222;
-}
-
-.contact-box p {
-  font-size: 14px;
-  color: #555;
-}
-
-.contact-right {
-  flex: 1;
-  min-width: 300px;
-}
-
-.contact-right h2 {
-  font-size: 26px;
-  color: #111;
-  margin-bottom: 10px;
-}
-
-.contact-right p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.contact-right form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-right input,
-.contact-right textarea {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-  resize: none;
-}
-
-.contact-right button {
-  background-color: #c86e44;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-right button:hover {
-  background-color: #a4572d;
-}
-
-.map-wrapper {
-  margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
   </style>
 </head>
@@ -399,43 +356,45 @@
   </ul>
 </nav>
 
-    <section class="contact-section">
-  <div class="contact-container">
-    <div class="contact-left">
-      <div class="contact-box">
-        <i class="fas fa-phone-alt"></i>
-        <h4>Phone</h4>
-        <p>207-8767-452</p>
-      </div>
-      <div class="contact-box">
-        <i class="fab fa-whatsapp"></i>
-        <h4>Whatsapp</h4>
-        <p>082-123-234-345</p>
-      </div>
-      <div class="contact-box">
-        <i class="fas fa-envelope"></i>
-        <h4>Email</h4>
-        <p>support@yoursite.com</p>
-      </div>
-      <div class="contact-box">
-        <i class="fas fa-store"></i>
-        <h4>Our Shop</h4>
-        <p>2443 Oak Ridge Omaha, QA 45065</p>
-      </div>
-    </div>
-    <div class="contact-right">
-      <h2>Get In Touch</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="Title" required>
-        <textarea placeholder="Type here..." rows="5" required></textarea>
-        <button type="submit">Send Now</button>
-      </form>
-    </div>
+<div class="contact-section">
+  <!-- Kontak Kiri -->
+  <div class="contact-left">
+    <h3>Contact Information</h3>
+    <p>We’ll create high-quality linkable content and build at least 40 high-authority links.</p>
+    <p>📞 +8801777777846</p>
+    <p>📞 +98687838686</p>
+    <p>📧 Support@nurency.com</p>
+    <p>📍 New York, USA</p>
   </div>
-</section>
+
+  <!-- Form Kanan -->
+  <div class="contact-right">
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Trangely" />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="hello@nurency.com" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Your Subject</label>
+        <input type="text" id="subject" placeholder="I want to hire you quickly" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write here your message"></textarea>
+      </div>
+
+      <button type="submit" class="send-button">Send Message</button>
+    </form>
+  </div>
+</div>
 
 
   <footer class="footer-info">
