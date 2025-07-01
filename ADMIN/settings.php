@@ -1,3 +1,41 @@
+<?php
+session_start();
+
+// Cek apakah admin sudah login
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Koneksi ke database
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "sepakung";
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
+
+// Ambil data admin dari database
+$admin_id = $_SESSION['id'];
+$sql = "SELECT nama, email, foto FROM users WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result && $result->num_rows > 0) {
+    $admin = $result->fetch_assoc();
+} else {
+    session_destroy();
+    header("Location: login.php?error=notfound");
+    exit();
+}
+?>
+
+
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
@@ -118,22 +156,19 @@
            Profile picture upload
           </label>
           <div class="flex items-center space-x-4">
-           <img alt="Profile picture silhouette of John Doe with a blue background" class="rounded-full bg-gray-300 object-cover w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/a89ab7ab-0372-4fb3-e5dd-5c55422d7fd5.jpg" width="40"/>
-           <div class="flex flex-col text-xs font-semibold text-gray-900">
-            <span>
-             Cece
-            </span>
-            <span class="font-normal text-gray-400">
-             Role/Title location
-            </span>
-           </div>
-           <button class="bg-[#6B916B] text-white text-xs rounded px-3 py-1 hover:bg-[#ace1af] transition" type="button">
-            Upload New Photo
-           </button>
-           <button class="border border-gray-300 text-gray-600 text-xs rounded px-3 py-1 hover:bg-gray-100 transition" type="button">
-            Delete
-           </button>
-          </div>
+  <img src="<?php echo $admin['foto'] ? '/sepakung/uploads/' . $admin['foto'] : 'https://via.placeholder.com/150'; ?>" class="rounded-full bg-gray-300 object-cover w-10 h-10">
+  <div class="flex flex-col text-xs font-semibold text-gray-900">
+    <span><?php echo htmlspecialchars($admin['nama']); ?></span>
+    <span class="font-normal text-gray-400"><?php echo htmlspecialchars($admin['email']); ?></span>
+  </div>
+  <form method="POST" action="update_profil.php" enctype="multipart/form-data">
+    <input type="file" name="foto" class="hidden" id="uploadFoto" onchange="this.form.submit();">
+    <label for="uploadFoto" class="bg-[#6B916B] text-white text-xs rounded px-3 py-1 hover:bg-[#ace1af] cursor-pointer transition">Upload New Photo</label>
+  </form>
+  <form method="POST" action="hapus_foto.php" onsubmit="return confirm('Yakin hapus foto profil?');">
+    <button type="submit" class="border border-gray-300 text-gray-600 text-xs rounded px-3 py-1 hover:bg-gray-100 transition">Delete</button>
+  </form>
+</div>
          </div>
          <!-- Organization Information -->
          <div>

@@ -356,44 +356,32 @@
   </ul>
 </nav>
 
-<div class="contact-section">
-  <!-- Kontak Kiri -->
-  <div class="contact-left">
-    <h3>Contact Information</h3>
-    <p>We’ll create high-quality linkable content and build at least 40 high-authority links.</p>
-    <p>📞 +8801777777846</p>
-    <p>📞 +98687838686</p>
-    <p>📧 Support@nurency.com</p>
-    <p>📍 New York, USA</p>
-  </div>
+
+
 
   <!-- Form Kanan -->
-  <div class="contact-right">
-    <form>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="John Trangely" />
-        </div>
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" placeholder="hello@nurency.com" />
-        </div>
-      </div>
+  <!-- Form Kanan -->
+<div class="contact-right">
 
-      <div class="form-group">
-        <label for="subject">Your Subject</label>
-        <input type="text" id="subject" placeholder="I want to hire you quickly" />
-      </div>
+<h2 style="text-align: center; margin-top: 40px; font-size: 24px; color: #333;">
+  Berikan Masukan atau Komentar Anda
+</h2>
+<p style="text-align: center; color: #555; margin-bottom: 20px;">
+  Kritik dan saran Anda sangat berarti bagi pembangunan Desa Sepakung yang lebih baik.
+</p>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write here your message"></textarea>
-      </div>
-
-      <button type="submit" class="send-button">Send Message</button>
-    </form>
+  <form action="/sepakung/pengunjung/kirim_komentar.php" method="POST">
+  <div class="form-group">
+    <label for="subject">Subjek</label>
+    <input type="text" id="subject" name="subject" required />
   </div>
+  <div class="form-group">
+    <label for="message">Komentar / Pesan</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="send-button">Kirim Komentar</button>
+</form>
+</div>
 </div>
 
 

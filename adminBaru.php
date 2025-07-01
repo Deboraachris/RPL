@@ -77,26 +77,33 @@ if (isset($_GET['hapus']) && $_GET['hapus'] == 'berhasil') {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if ($result->num_rows > 0): ?>
-                            <?php while($row = $result->fetch_assoc()): ?>
-                                <tr class="text-center">
-                                    <td class="py-2 px-4 border-b"><?php echo $row['id']; ?></td>
-                                    <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['nama']); ?></td>
-                                    <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['email']); ?></td>
-                                    <td class="py-2 px-4 border-b">
-                                        <form action="hapus-admin.php" method="POST" onsubmit="return confirm('Yakin ingin menghapus admin ini?');">
-                                            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">
-                                                Hapus
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            <?php endwhile; ?>
-                        <?php else: ?>
-                            <tr><td colspan="4" class="py-4 text-center text-gray-500">Belum ada admin</td></tr>
-                        <?php endif; ?>
-                    </tbody>
+  <?php if ($result->num_rows > 0): ?>
+    <?php while($row = $result->fetch_assoc()): ?>
+      <tr class="text-center">
+        <td class="py-2 px-4 border-b"><?php echo $row['id']; ?></td>
+        <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['nama']); ?></td>
+        <td class="py-2 px-4 border-b"><?php echo htmlspecialchars($row['email']); ?></td>
+        <td class="py-2 px-4 border-b">
+          <?php if ($row['id'] != 1): ?>
+            <form action="hapus-admin.php" method="POST" onsubmit="return confirm('Yakin ingin menghapus admin ini?');">
+              <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+              <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">
+                Hapus
+              </button>
+            </form>
+          <?php else: ?>
+            <span class="text-gray-400 italic">Tidak bisa dihapus</span>
+          <?php endif; ?>
+        </td>
+      </tr>
+    <?php endwhile; ?>
+  <?php else: ?>
+    <tr>
+      <td colspan="4" class="py-4 text-center text-gray-500">Belum ada admin</td>
+    </tr>
+  <?php endif; ?>
+</tbody>
+
                 </table>
             </div>
         </div>
