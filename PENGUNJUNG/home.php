@@ -1,28 +1,15 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "sepakung";
-
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli("localhost", "root", "", "sepakung");
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, judul, deskripsi, tanggal FROM berita ORDER BY tanggal DESC";
-$result = $conn->query($sql);
-$berita = [];
-
-if ($result && $result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $berita[] = $row;
-    }
-}
-$conn->close();
+$berita = $conn->query("SELECT * FROM berita ORDER BY tanggal DESC LIMIT 3");
+$event = $conn->query("SELECT * FROM eventt ORDER BY tanggal DESC LIMIT 3");
+$berita_pemerintah = $conn->query("SELECT * FROM beritaPemerintah ORDER BY tanggal DESC LIMIT 3");
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -519,80 +506,70 @@ $conn->close();
 
         <!-- Pilihan Kategori -->
 <section class="section category-selector">
-    <div class="category-box">
-        <button onclick="showContent('berita')">Berita</button>
-        <button onclick="showContent('event')">Event</button>
-        <button onclick="showContent('pemerintahan')">Kepemerintahan</button>
-    </div>
+    <div class="flex justify-center my-6 gap-4">
+  <button onclick="tampilkan('berita')">Berita</button>
+<button onclick="tampilkan('event')">Event</button>
+<button onclick="tampilkan('pemerintah')">Kepemerintahan</button>
+</div>
+
 </section>
+
+
 
 <!-- Konten Dinamis -->
-<section class="section" id="berita" style="display: block;">
-    <h2>Berita Desa Sepakung</h2>
-    <div class="content-list">
-    <div class="content-item">
-        <img src="https://source.unsplash.com/600x300/?village" alt="Gambar Berita">
-        <div class="content-text">
-            <h3>Penyampaian Visi-Misi Calon Kepala Desa Sepakung</h3>
-            <div class="meta-info">
-                <span>📅 24 October 2019</span> | 
-                <span>👤 admin</span>
-            </div>
-            <p>
-                Sepakung, (21/10/19) Ratusan orang berbondong-bondong menuju balai desa Sepakung mulai pukul 14.00 WIB 
-                untuk menyaksikan penyampaian visi dan misi calon kepala desa Sepakung periode 2020-2026. 
-                Pemilihan akan dilaksanakan pada tanggal 27.
-            </p>
-            <div class="tag">#berita</div>
+<section id="berita" class="kategori my-10 px-4">
+  <h2 class="text-2xl font-bold mb-4">Berita Umum</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <?php while($row = $berita->fetch_assoc()): ?>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="admin/berita/tampil-gambar-berita.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
+          <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
+          <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
         </div>
-    </div>
-</div>
-
+      </div>
+    <?php endwhile; ?>
+  </div>
 </section>
 
-<section class="section" id="event" style="display: none;">
-    <h2>Event Desa Sepakung</h2>
-    <div class="content-list">
-    <div class="content-item">
-        <img src="https://source.unsplash.com/600x300/?village" alt="Gambar Berita">
-        <div class="content-text">
-            <h3>Penyampaian Visi-Misi Calon Kepala Desa Sepakung</h3>
-            <div class="meta-info">
-                <span>📅 24 October 2019</span> | 
-                <span>👤 admin</span>
-            </div>
-            <p>
-                Sepakung, (21/10/19) Ratusan orang berbondong-bondong menuju balai desa Sepakung mulai pukul 14.00 WIB 
-                untuk menyaksikan penyampaian visi dan misi calon kepala desa Sepakung periode 2020-2026. 
-                Pemilihan akan dilaksanakan pada tanggal 27.
-            </p>
-            <div class="tag">#event</div>
+
+
+<section id="event" class="kategori my-10 px-4 hidden">
+  <h2 class="text-2xl font-bold mb-4">Event Terbaru</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <?php while($row = $event->fetch_assoc()): ?>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="admin/eventt/tampil-gambar-event.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
+          <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
+          <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
         </div>
-    </div>
-</div>
+      </div>
+    <?php endwhile; ?>
+  </div>
 </section>
 
-<section class="section" id="pemerintahan" style="display: none;">
-    <h2>Informasi Pemerintahan</h2>
-    <div class="content-list">
-    <div class="content-item">
-        <img src="https://source.unsplash.com/600x300/?village" alt="Gambar Berita">
-        <div class="content-text">
-            <h3>Penyampaian Visi-Misi Calon Kepala Desa Sepakung</h3>
-            <div class="meta-info">
-                <span>📅 24 October 2019</span> | 
-                <span>👤 admin</span>
-            </div>
-            <p>
-                Sepakung, (21/10/19) Ratusan orang berbondong-bondong menuju balai desa Sepakung mulai pukul 14.00 WIB 
-                untuk menyaksikan penyampaian visi dan misi calon kepala desa Sepakung periode 2020-2026. 
-                Pemilihan akan dilaksanakan pada tanggal 27.
-            </p>
-            <div class="tag">#kepemerintahan</div>
+
+
+<section id="pemerintah" class="kategori my-10 px-4 hidden">
+  <h2 class="text-2xl font-bold mb-4">Berita Pemerintah</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <?php while($row = $berita_pemerintah->fetch_assoc()): ?>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="admin/kepemerintahan/tampil-gambar-berita-pemerintah.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
+          <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
+          <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
         </div>
-    </div>
-</div>
+      </div>
+    <?php endwhile; ?>
+  </div>
 </section>
+
+
 
     <!-- Footer Section -->
     <footer class="footer-info">
@@ -625,15 +602,63 @@ $conn->close();
   </div>
 </footer>
 
+<script>
+function showContent(category) {
+    // Sembunyikan semua konten
+    document.getElementById("berita").style.display = "none";
+    document.getElementById("event").style.display = "none";
+    document.getElementById("pemerintah").style.display = "none";
 
-    <!-- JS untuk Menampilkan Konten -->
-    <script>
-        function showContent(category) {
-            document.getElementById("berita").style.display = "none";
-            document.getElementById("event").style.display = "none";
-            document.getElementById("pemerintahan").style.display = "none";
-            document.getElementById(category).style.display = "block";
-        }
-    </script>
+    // Kosongkan konten
+    const container = document.querySelector(`#${category} .content-list`);
+    container.innerHTML = '<p>Loading...</p>';
+
+    // Tampilkan kontainer
+    document.getElementById(category).style.display = "block";
+
+    // AJAX load content
+    fetch(`loadContent.php?kategori=${category}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length === 0) {
+                container.innerHTML = "<p>Tidak ada data ditemukan.</p>";
+                return;
+            }
+
+            container.innerHTML = '';
+            data.forEach(item => {
+                container.innerHTML += `
+                <div class="content-item">
+                    <img src="https://source.unsplash.com/600x300/?village" alt="Gambar">
+                    <div class="content-text">
+                        <h3>${item.judul}</h3>
+                        <div class="meta-info">
+                            <span>📅 ${item.tanggal}</span> | <span>👤 admin</span>
+                        </div>
+                        <p>${item.deskripsi}</p>
+                        <div class="tag">${item.tag}</div>
+                    </div>
+                </div>`;
+            });
+        })
+        .catch(error => {
+            container.innerHTML = "<p>Gagal memuat data.</p>";
+            console.error(error);
+        });
+}
+
+function tampilkan(kategori) {
+    const semua = document.querySelectorAll('.kategori');
+    semua.forEach(k => k.classList.add('hidden'));
+    
+    const target = document.getElementById(kategori);
+    if (target) {
+      target.classList.remove('hidden');
+    } else {
+      console.warn("ID kategori tidak ditemukan:", kategori);
+    }
+  }
+</script>
+
 </body>
 </html>
