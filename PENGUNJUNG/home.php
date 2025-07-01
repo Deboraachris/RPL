@@ -1,15 +1,35 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "sepakung");
+
+// Cek Koneksi
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-$berita = $conn->query("SELECT * FROM berita ORDER BY tanggal DESC LIMIT 3");
-$event = $conn->query("SELECT * FROM eventt ORDER BY tanggal DESC LIMIT 3");
-$berita_pemerintah = $conn->query("SELECT * FROM beritaPemerintah ORDER BY tanggal DESC LIMIT 3");
+// Fungsi untuk mengambil data
+function fetchData($conn, $query) {
+    $stmt = $conn->prepare($query);
+    if (!$stmt) {
+        die("Query gagal: " . $conn->error);
+    }
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+    return $result;
+}
+
+// Fetch Berita
+$berita = fetchData($conn, "SELECT * FROM berita ORDER BY tanggal DESC LIMIT 3");
+
+// Fetch Event
+$event = fetchData($conn, "SELECT * FROM eventt ORDER BY tanggal DESC LIMIT 3");
+
+// Fetch Berita Pemerintah (perbaiki nama tabel di sini)
+$berita_pemerintah = fetchData($conn, "SELECT * FROM berita_pemerintah ORDER BY tanggal DESC LIMIT 3");
+
+// Tutup Koneksi
+$conn->close();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -418,6 +438,12 @@ $berita_pemerintah = $conn->query("SELECT * FROM beritaPemerintah ORDER BY tangg
     font-size: 14px;
 }
 
+.active-btn {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+
     </style>
 </head>
 <body>
@@ -504,72 +530,63 @@ $berita_pemerintah = $conn->query("SELECT * FROM beritaPemerintah ORDER BY tangg
     </div>
 </section>
 
-        <!-- Pilihan Kategori -->
+<!-- Pilihan Kategori -->
 <section class="section category-selector">
     <div class="flex justify-center my-6 gap-4">
-  <button onclick="tampilkan('berita')">Berita</button>
-<button onclick="tampilkan('event')">Event</button>
-<button onclick="tampilkan('pemerintah')">Kepemerintahan</button>
-</div>
-
+        <button onclick="tampilkan('berita')">Berita</button>
+        <button onclick="tampilkan('event')">Event</button>
+        <button onclick="tampilkan('pemerintah')">Kepemerintahan</button>
+    </div>
 </section>
-
-
 
 <!-- Konten Dinamis -->
-<section id="berita" class="kategori my-10 px-4">
-  <h2 class="text-2xl font-bold mb-4">Berita Umum</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <?php while($row = $berita->fetch_assoc()): ?>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <img src="admin/berita/tampil-gambar-berita.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
-          <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
-          <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
-        </div>
-      </div>
-    <?php endwhile; ?>
-  </div>
+<section id="berita" class="kategori my-10 px-4 hidden">
+    <h2 class="text-2xl font-bold mb-4">Berita Umum</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <?php while($row = $berita->fetch_assoc()): ?>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <img src="admin/berita/tampil-gambar-berita.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
+                    <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
+                    <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
 </section>
-
-
 
 <section id="event" class="kategori my-10 px-4 hidden">
-  <h2 class="text-2xl font-bold mb-4">Event Terbaru</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <?php while($row = $event->fetch_assoc()): ?>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <img src="admin/eventt/tampil-gambar-event.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
-          <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
-          <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
-        </div>
-      </div>
-    <?php endwhile; ?>
-  </div>
+    <h2 class="text-2xl font-bold mb-4">Event Terbaru</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <?php while($row = $event->fetch_assoc()): ?>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <img src="admin/eventt/tampil-gambar-event.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
+                    <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
+                    <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
 </section>
-
-
 
 <section id="pemerintah" class="kategori my-10 px-4 hidden">
-  <h2 class="text-2xl font-bold mb-4">Berita Pemerintah</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <?php while($row = $berita_pemerintah->fetch_assoc()): ?>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <img src="admin/kepemerintahan/tampil-gambar-berita-pemerintah.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
-        <div class="p-4">
-          <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
-          <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
-          <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
-        </div>
-      </div>
-    <?php endwhile; ?>
-  </div>
+    <h2 class="text-2xl font-bold mb-4">Berita Pemerintah</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <?php while($row = $berita_pemerintah->fetch_assoc()): ?>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <img src="admin/kepemerintahan/tampil-gambar-berita-pemerintah.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
+                    <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
+                    <p class="text-sm text-gray-700 mt-2"><?= mb_strimwidth(strip_tags($row['deskripsi']), 0, 100, "...") ?></p>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
 </section>
-
-
 
     <!-- Footer Section -->
     <footer class="footer-info">
@@ -648,16 +665,29 @@ function showContent(category) {
 }
 
 function tampilkan(kategori) {
+    // Sembunyikan semua kategori
     const semua = document.querySelectorAll('.kategori');
     semua.forEach(k => k.classList.add('hidden'));
-    
+
+    // Tampilkan kategori yang dipilih
     const target = document.getElementById(kategori);
     if (target) {
-      target.classList.remove('hidden');
-    } else {
-      console.warn("ID kategori tidak ditemukan:", kategori);
+        target.classList.remove('hidden');
     }
-  }
+}
+
+// Jalankan saat halaman pertama kali dimuat
+window.onload = function () {
+    tampilkan('berita');
+};
+
+// Ubah tampilan tombol yang aktif
+document.querySelectorAll('.category-box button').forEach(btn => {
+    btn.classList.remove('active-btn');
+});
+document.querySelector(`.category-box button[onclick="tampilkan('${kategori}')"]`).classList.add('active-btn');
+
+
 </script>
 
 </body>
