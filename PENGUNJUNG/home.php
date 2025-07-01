@@ -1,7 +1,13 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "sepakung");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Cek Koneksi
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "sepakung";
+
+$conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
@@ -212,25 +218,28 @@ $conn->close();
         }
 
         /* Kategori Button */
-        .category-box {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .category-box button {
-            padding: 12px 24px;
-            background-color: #eee;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        .category-box button:hover {
-            background-color: #ffcc00;
-            transform: scale(1.05);
-        }
+        .category-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.category-selector button {
+    padding: 12px 24px;
+    background-color: #eee;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-selector button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
 
         /* Sections */
         .section {
@@ -443,6 +452,10 @@ $conn->close();
     transform: scale(1.05);
 }
 
+.hidden {
+    display: none;
+}
+
 
     </style>
 </head>
@@ -540,7 +553,7 @@ $conn->close();
 </section>
 
 <!-- Konten Dinamis -->
-<section id="berita" class="kategori my-10 px-4 hidden">
+<section id="berita" class="kategori hidden">
     <h2 class="text-2xl font-bold mb-4">Berita Umum</h2>
     <div class="grid md:grid-cols-3 gap-6">
         <?php while($row = $berita->fetch_assoc()): ?>
@@ -556,7 +569,7 @@ $conn->close();
     </div>
 </section>
 
-<section id="event" class="kategori my-10 px-4 hidden">
+<section id="event" class="kategori hidden">
     <h2 class="text-2xl font-bold mb-4">Event Terbaru</h2>
     <div class="grid md:grid-cols-3 gap-6">
         <?php while($row = $event->fetch_assoc()): ?>
@@ -572,7 +585,7 @@ $conn->close();
     </div>
 </section>
 
-<section id="pemerintah" class="kategori my-10 px-4 hidden">
+<section id="pemerintah" class="kategori hidden">
     <h2 class="text-2xl font-bold mb-4">Berita Pemerintah</h2>
     <div class="grid md:grid-cols-3 gap-6">
         <?php while($row = $berita_pemerintah->fetch_assoc()): ?>
@@ -620,75 +633,37 @@ $conn->close();
 </footer>
 
 <script>
-function showContent(category) {
-    // Sembunyikan semua konten
-    document.getElementById("berita").style.display = "none";
-    document.getElementById("event").style.display = "none";
-    document.getElementById("pemerintah").style.display = "none";
-
-    // Kosongkan konten
-    const container = document.querySelector(`#${category} .content-list`);
-    container.innerHTML = '<p>Loading...</p>';
-
-    // Tampilkan kontainer
-    document.getElementById(category).style.display = "block";
-
-    // AJAX load content
-    fetch(`loadContent.php?kategori=${category}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.length === 0) {
-                container.innerHTML = "<p>Tidak ada data ditemukan.</p>";
-                return;
-            }
-
-            container.innerHTML = '';
-            data.forEach(item => {
-                container.innerHTML += `
-                <div class="content-item">
-                    <img src="https://source.unsplash.com/600x300/?village" alt="Gambar">
-                    <div class="content-text">
-                        <h3>${item.judul}</h3>
-                        <div class="meta-info">
-                            <span>📅 ${item.tanggal}</span> | <span>👤 admin</span>
-                        </div>
-                        <p>${item.deskripsi}</p>
-                        <div class="tag">${item.tag}</div>
-                    </div>
-                </div>`;
-            });
-        })
-        .catch(error => {
-            container.innerHTML = "<p>Gagal memuat data.</p>";
-            console.error(error);
-        });
-}
-
 function tampilkan(kategori) {
-    // Sembunyikan semua kategori
+    // Sembunyikan semua section konten
     const semua = document.querySelectorAll('.kategori');
-    semua.forEach(k => k.classList.add('hidden'));
+    semua.forEach(el => el.classList.add('hidden'));
 
     // Tampilkan kategori yang dipilih
     const target = document.getElementById(kategori);
     if (target) {
         target.classList.remove('hidden');
     }
+
+    // Reset semua tombol aktif
+    const buttons = document.querySelectorAll('.category-selector button');
+    buttons.forEach(btn => btn.classList.remove('active-btn'));
+
+    // Tambahkan class active-btn ke tombol yang diklik
+    const clickedBtn = Array.from(buttons).find(btn =>
+        btn.getAttribute('onclick') === `tampilkan('${kategori}')`
+    );
+    if (clickedBtn) {
+        clickedBtn.classList.add('active-btn');
+    }
 }
 
-// Jalankan saat halaman pertama kali dimuat
+// Jalankan saat halaman dimuat
 window.onload = function () {
     tampilkan('berita');
 };
-
-// Ubah tampilan tombol yang aktif
-document.querySelectorAll('.category-box button').forEach(btn => {
-    btn.classList.remove('active-btn');
-});
-document.querySelector(`.category-box button[onclick="tampilkan('${kategori}')"]`).classList.add('active-btn');
-
-
 </script>
+
+
 
 </body>
 </html>

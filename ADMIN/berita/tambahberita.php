@@ -1,3 +1,43 @@
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "sepakung";
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $judul = $_POST['judul'];
+    $deskripsi = $_POST['deskripsi'];
+    $tanggal = date("Y-m-d H:i:s");
+
+    $gambar = null;
+    $tipe_foto = null;
+
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === 0) {
+        $gambar = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+        $tipe_foto = $_FILES['foto']['type'];
+    }
+
+    $sql = "INSERT INTO berita (judul, deskripsi, tanggal, foto) VALUES (?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ssss", $judul, $deskripsi, $tanggal, $gambar);
+    
+    if ($stmt->execute()) {
+        header("Location: berita.php");
+        exit;
+    } else {
+        echo "Gagal menambahkan berita: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +51,7 @@
   <div class="max-w-xl mx-auto bg-white rounded-lg shadow-md p-6">
     <h1 class="text-2xl font-bold mb-4">Tambah Berita Baru</h1>
 
-    <form action="proses-tambah-berita.php" method="POST" enctype="multipart/form-data" class="space-y-4">
+    <form action="" method="POST" enctype="multipart/form-data">
       <div>
         <label for="judul" class="block text-gray-700 font-medium mb-1">Judul Berita</label>
         <input type="text" name="judul" id="judul" required

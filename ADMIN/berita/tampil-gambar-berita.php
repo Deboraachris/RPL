@@ -15,8 +15,15 @@ $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    header("Content-Type: image/jpeg"); // sesuaikan jika perlu
-    echo $row['foto'];
+    $gambarData = $row['foto'];
+
+    // Deteksi MIME type otomatis
+    $finfo = finfo_open();
+    $mimeType = finfo_buffer($finfo, $gambarData, FILEINFO_MIME_TYPE);
+    finfo_close($finfo);
+
+    header("Content-Type: $mimeType");
+    echo $gambarData;
 } else {
     http_response_code(404);
     echo "Gambar tidak ditemukan.";
