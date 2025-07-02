@@ -555,10 +555,10 @@ $conn->close();
 <!-- Konten Dinamis -->
 <section id="berita" class="kategori hidden">
     <h2 class="text-2xl font-bold mb-4">Berita Umum</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="flex flex-wrap justify-between gap-4">
         <?php while($row = $berita->fetch_assoc()): ?>
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <img src="admin/berita/tampil-gambar-berita.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+            <div class="story-card flex-1 min-w-[30%] max-w-[30%]">
+                <img src="/sepakung/admin/berita/tampil-gambar-berita.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-32 object-cover">
                 <div class="p-4">
                     <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
                     <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
@@ -571,10 +571,10 @@ $conn->close();
 
 <section id="event" class="kategori hidden">
     <h2 class="text-2xl font-bold mb-4">Event Terbaru</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="flex flex-wrap justify-between gap-4">
         <?php while($row = $event->fetch_assoc()): ?>
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <img src="admin/eventt/tampil-gambar-event.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+            <div class="story-card flex-1 min-w-[30%] max-w-[30%]">
+                <img src="/sepakung/admin/eventt/tampil-gambar-event.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-32 object-cover">
                 <div class="p-4">
                     <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
                     <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
@@ -587,10 +587,10 @@ $conn->close();
 
 <section id="pemerintah" class="kategori hidden">
     <h2 class="text-2xl font-bold mb-4">Berita Pemerintah</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="flex flex-wrap justify-between gap-4">
         <?php while($row = $berita_pemerintah->fetch_assoc()): ?>
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <img src="admin/kepemerintahan/tampil-gambar-berita-pemerintah.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-40 object-cover">
+            <div class="story-card flex-1 min-w-[30%] max-w-[30%]">
+                <img src="/sepakung/admin/kepemerintahan/tampil-gambar-berita-pemerintah.php?id=<?= $row['id'] ?>" alt="<?= htmlspecialchars($row['judul']) ?>" class="w-full h-32 object-cover">
                 <div class="p-4">
                     <h3 class="font-bold text-lg"><?= htmlspecialchars($row['judul']) ?></h3>
                     <p class="text-sm text-gray-500"><?= date("d M Y", strtotime($row['tanggal'])) ?></p>
@@ -600,6 +600,7 @@ $conn->close();
         <?php endwhile; ?>
     </div>
 </section>
+
 
     <!-- Footer Section -->
     <footer class="footer-info">
